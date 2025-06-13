@@ -16,10 +16,18 @@
         }
         h1, h2, h3 {
             color: #0056b3;
+            padding-top: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
         }
         iframe {
             display: block;
             margin: 20px auto;
+            max-width: 100%;
+            height: auto;
         }
         p {
             margin-bottom: 1em;
@@ -28,7 +36,60 @@
             border: 0;
             height: 1px;
             background: #ccc;
-            margin: 20px 0;
+            margin: 40px 0;
+        }
+        .contents-box {
+            border: 1px solid #ddd;
+            padding: 15px 25px;
+            margin-bottom: 40px;
+            background-color: #e9e9e9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .contents-box h2 {
+            margin-top: 0;
+            color: #0056b3;
+            text-align: center;
+            font-size: 1.8em;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
+        .contents-box ul {
+            list-style: none; /* Remove default bullet points */
+            padding: 0;
+        }
+        .contents-box ul li {
+            margin-bottom: 8px;
+        }
+        .contents-box ul ul { /* For nested sub-lists (subchapters) */
+            margin-left: 25px; /* Indent subchapters */
+            margin-top: 5px;
+            list-style: disc; /* Add disc bullets for subchapters */
+        }
+        .contents-box a {
+            text-decoration: none;
+            color: #0056b3;
+            font-weight: bold;
+        }
+        .contents-box a:hover {
+            text-decoration: underline;
+            color: #003d7a;
+        }
+        .back-to-top {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+        .back-to-top a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        .back-to-top a:hover {
+            text-decoration: underline;
+        }
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -47,6 +108,53 @@
 
     <hr>
 
+    <div class="contents-box">
+        <h2>Contents</h2>
+        <ul>
+            <li><a href="#introduction">1. Introduction to Warlock Tanking</a></li>
+            <li><a href="#twin-emps-overview">2. Twin Emperors Overview</a>
+                <ul>
+                    <li><a href="#veklor-abilities">2.1. Emperor Vek'lor's Abilities</a></li>
+                    <li><a href="#veknilash-abilities">2.2. Emperor Vek'nilash's Abilities</a></li>
+                    <li><a href="#aura-of-discord">2.3. Aura of Discord (The Crucial Mechanic)</a></li>
+                </ul>
+            </li>
+            <li><a href="#preparation">3. Preparation Phase</a>
+                <ul>
+                    <li><a href="#talents-gear">3.1. Talent Spec & Gear Considerations</a></li>
+                    <li><a href="#consumables">3.2. Essential Consumables</a></li>
+                    <li><a href="#raid-comp">3.3. Raid Composition & Strategy</a></li>
+                </ul>
+            </li>
+            <li><a href="#fight-strategy">4. The Fight: Phase by Phase</a>
+                <ul>
+                    <li><a href="#pull-positioning">4.1. Pull & Initial Positioning</a></li>
+                    <li><a href="#threat-management">4.2. Threat Management & Spell Rotation</a></li>
+                    <li><a href="#imperial-exchange">4.3. Imperial Exchange (Swap Mechanic)</a></li>
+                    <li><a href="#healing-mana">4.4. Healing & Mana Management</a></li>
+                </ul>
+            </li>
+            <li><a href="#advanced-tips">5. Advanced Tips & Troubleshooting</a></li>
+            <li><a href="#faq">6. Frequently Asked Questions</a></li>
+            <li><a href="#conclusion">7. Conclusion & Further Resources</a></li>
+        </ul>
+    </div>
+
+    <section id="introduction">
+        <h2>1. Introduction to Warlock Tanking</h2>
+        <p>test.</p>
+        <p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </p>
+    </section>
+
     <p>More content coming soon!</p>
+
+     <footer>
+        <div class="back-to-top">
+            <a href="#top">↑ Back to Top</a>
+        </div>
+        <p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="license noopener noreferrer">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+    </footer>
 </body>
 </html>
