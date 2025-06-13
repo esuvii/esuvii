@@ -81,6 +81,27 @@ hr {
 .back-to-top a:hover {
     text-decoration: underline;
 }
+
+.fixed-back-to-top {
+    position: fixed; /* Makes the element stay in place regardless of scroll */
+    bottom: 20px;    /* 20 pixels from the bottom of the viewport */
+    right: 20px;     /* 20 pixels from the right of the viewport */
+    background-color: #0056b3; /* Blue background, matching your headings */
+    color: white;    /* White arrow color */
+    padding: 10px 15px; /* Padding inside the button */
+    border-radius: 5px; /* Slightly rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.5em; /* Larger arrow size */
+    line-height: 1; /* Adjust line height for better vertical centering */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow */
+    z-index: 1000; /* Ensures it's on top of other content */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+.fixed-back-to-top:hover {
+    background-color: #003d7a; /* Darker blue on hover */
+}
+
+
 html {
     scroll-behavior: smooth;
 }
