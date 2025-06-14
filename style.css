@@ -162,7 +162,7 @@ figcaption {
     flex-shrink: 0;
     object-fit: contain;
     transform: scale(1.3); /* Makes the icon visually 30% larger */
-    border: 1px solid #999; /* A thin, slightly darker grey border */
+    border: 2px solid #999; /* A thin, slightly darker grey border */
     border-radius: 4px; /* A slight curve on the corners */
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); /* A small drop shadow */
 }
@@ -216,7 +216,7 @@ figcaption {
     .spell-icon {
         margin-bottom: 10px; /* Space between icon and text when stacked */
         transform: scale(1.0); /* Resetting scale on small screens to original size */
-        border: 1px solid #bbb; /* Lighter border when smaller */
+        border: 2px solid #bbb; /* Lighter border when smaller */
         box-shadow: none; /* No shadow when smaller */
     }
     .spell-entry--left-icon,
