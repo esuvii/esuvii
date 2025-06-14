@@ -124,14 +124,18 @@ figcaption {
     text-align: center; /* This explicitly centers the text within the figcaption itself */
 }
 
-/* Styles for the Spell Icon */
-.spell-icon {
-    width: 64px;
-    height: 64px;
-    flex-shrink: 0;
-    object-fit: contain;
-    /* NEW: Apply the scale transform here to make the icon visually larger */
-    transform: scale(1.3);
+
+
+/* NEW: Container for the group of spell entries */
+.spell-list-group {
+    display: grid;
+    grid-template-columns: max-content;
+    justify-content: center;
+    /* MODIFIED: If you use .spell-list-group, its gap replaces spell-entry's margin-bottom */
+    gap: 20px; /* Changed from 15px to 20px, feel free to adjust for vertical spacing between spell entries */
+    margin-top: 25px;
+    margin-bottom: 25px;
+    max-width: 100%;
 }
 
 /* Base Styles for each Spell Entry */
@@ -151,19 +155,49 @@ figcaption {
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
-/* NEW: Container for the group of spell entries */
-.spell-list-group {
-    display: grid;
-    grid-template-columns: max-content;
-    justify-content: center;
-    /* MODIFIED: If you use .spell-list-group, its gap replaces spell-entry's margin-bottom */
-    gap: 20px; /* Changed from 15px to 20px, feel free to adjust for vertical spacing between spell entries */
-    margin-top: 25px;
-    margin-bottom: 25px;
-    max-width: 100%;
+/* Styles for the Spell Icon */
+.spell-icon {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    object-fit: contain;
+    transform: scale(1.3); /* Makes the icon visually 30% larger */
+    border: 1px solid #999; /* A thin, slightly darker grey border */
+    border-radius: 4px; /* A slight curve on the corners */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); /* A small drop shadow */
 }
 
-/* ... rest of your CSS ... */
+/* Styles for the Spell Text Details */
+.spell-details {
+    /* REMOVE THIS LINE: flex-grow: 1; - You should have removed this in the last step. */
+    /* Ensure text wraps within a reasonable column, allowing it to stretch within the fixed spell-entry width */
+    max-width: 500px; /* Adjust this value as needed. This will be the max width of the text column */
+                      /* It's important for the 'flex-direction: row' layout to prevent one line from making the box too wide */
+    flex-grow: 1; /* ADD THIS BACK! Now that spell-entry has a fixed width, spell-details can grow to fill it */
+}
+
+.spell-details h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #0056b3;
+    font-size: 1.2em;
+}
+
+.spell-details p {
+    margin-top: 0;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+/* Modifier Class: Icon on Left (Default Flexbox behavior) */
+.spell-entry--left-icon {
+    flex-direction: row;
+}
+
+/* Modifier Class: Icon on Right (Reverses Flexbox order) */
+.spell-entry--right-icon {
+    flex-direction: row-reverse;
+}
 
 /* Adjust for very small screens */
 @media (max-width: 600px) {
@@ -180,9 +214,10 @@ figcaption {
         padding: 15px; /* Smaller padding when stacked */
     }
     .spell-icon {
-        margin-bottom: 10px;
-        /* NEW: Reset scale if you don't want it on small screens, or keep it */
-        transform: scale(1.0); /* Example: Resetting scale on small screens */
+        margin-bottom: 10px; /* Space between icon and text when stacked */
+        transform: scale(1.0); /* Resetting scale on small screens to original size */
+        border: 1px solid #bbb; /* Lighter border when smaller */
+        box-shadow: none; /* No shadow when smaller */
     }
     .spell-entry--left-icon,
     .spell-entry--right-icon {
