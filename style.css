@@ -123,6 +123,7 @@ figcaption {
     /* ... other styling ... */
     text-align: center; /* This explicitly centers the text within the figcaption itself */
 }
+
 /* Base Styles for each Spell Entry */
 .spell-entry {
     display: flex; /* Enables Flexbox layout */
@@ -134,42 +135,51 @@ figcaption {
     border: 1px solid #eee; /* Light border */
     border-radius: 8px; /* Slightly rounded corners */
     box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* Subtle shadow for depth */
+
+    /* ----- NEW/MODIFIED STYLES FOR CENTERING AND SHRINK-WRAPPING ----- */
+    width: fit-content; /* Make the flex container only as wide as its content */
+    margin-left: auto;  /* Centers the flex container horizontally */
+    margin-right: auto; /* Centers the flex container horizontally */
+    max-width: 100%; /* Important: Ensures the box doesn't exceed its parent's width (800px body) */
 }
 
 /* Styles for the Spell Icon */
 .spell-icon {
-    width: 64px;  /* Typical size for game icons. Adjust as needed. */
-    height: 64px; /* Icons are typically square */
-    flex-shrink: 0; /* Prevents the icon from shrinking if the text content is very long */
-    object-fit: contain; /* Ensures the image fits within the box without cropping */
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    object-fit: contain;
 }
 
 /* Styles for the Spell Text Details */
 .spell-details {
-    flex-grow: 1; /* Allows this div to take up all available space, pushing the icon to the side */
+    /* REMOVE THIS LINE: flex-grow: 1; */
+    /* Add a max-width to ensure the text wraps within a reasonable column */
+    max-width: 500px; /* Adjust this value as needed. It controls how wide the text column gets before wrapping. */
+                      /* Example: If you want text to generally wrap within ~400px column, set 400px. */
 }
 
 .spell-details h4 {
-    margin-top: 0; /* Remove default top margin for heading within the box */
-    margin-bottom: 5px; /* Small space between heading and paragraph */
-    color: #0056b3; /* Matches your guide's heading color */
-    font-size: 1.2em; /* Slightly larger for emphasis */
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #0056b3;
+    font-size: 1.2em;
 }
 
 .spell-details p {
-    margin-top: 0; /* Remove default top margin for paragraph within the box */
-    font-size: 0.95em; /* Slightly smaller text for details */
+    margin-top: 0;
+    font-size: 0.95em;
     line-height: 1.4;
 }
 
 /* Modifier Class: Icon on Left (Default Flexbox behavior) */
 .spell-entry--left-icon {
-    flex-direction: row; /* Arranges items from left to right (icon then text) */
+    flex-direction: row;
 }
 
 /* Modifier Class: Icon on Right (Reverses Flexbox order) */
 .spell-entry--right-icon {
-    flex-direction: row-reverse; /* Arranges items from right to left (text then icon) */
+    flex-direction: row-reverse;
 }
 
 /* Optional: Adjust for very small screens if necessary, though Flexbox is quite robust */
@@ -177,6 +187,7 @@ figcaption {
     .spell-entry {
         flex-direction: column; /* Stack icon and text vertically on small screens */
         text-align: center; /* Center content when stacked */
+        width: auto; /* Allow it to take full width when stacking */
     }
     .spell-icon {
         margin-bottom: 10px; /* Add space between icon and text when stacked */
@@ -185,5 +196,8 @@ figcaption {
     .spell-entry--left-icon,
     .spell-entry--right-icon {
         flex-direction: column;
+    }
+    .spell-details {
+        max-width: 100%; /* Allow details to take full width when stacked */
     }
 }
