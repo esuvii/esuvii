@@ -100,6 +100,9 @@ hr {
 .fixed-back-to-top:hover {
     background-color: #003d7a; /* Darker blue on hover */
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* Centered Image Without Text Wrap */
 .center-img {
@@ -120,7 +123,67 @@ figcaption {
     /* ... other styling ... */
     text-align: center; /* This explicitly centers the text within the figcaption itself */
 }
+/* Base Styles for each Spell Entry */
+.spell-entry {
+    display: flex; /* Enables Flexbox layout */
+    align-items: center; /* Vertically centers items (icon and text) along the cross-axis */
+    gap: 15px; /* Creates space between the icon and the text block (modern way) */
+    margin-bottom: 25px; /* Adds space between different spell entries */
+    background-color: #fcfcfc; /* A very light background to distinguish each entry */
+    padding: 15px;
+    border: 1px solid #eee; /* Light border */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* Subtle shadow for depth */
+}
 
-html {
-    scroll-behavior: smooth;
+/* Styles for the Spell Icon */
+.spell-icon {
+    width: 64px;  /* Typical size for game icons. Adjust as needed. */
+    height: 64px; /* Icons are typically square */
+    flex-shrink: 0; /* Prevents the icon from shrinking if the text content is very long */
+    object-fit: contain; /* Ensures the image fits within the box without cropping */
+}
+
+/* Styles for the Spell Text Details */
+.spell-details {
+    flex-grow: 1; /* Allows this div to take up all available space, pushing the icon to the side */
+}
+
+.spell-details h4 {
+    margin-top: 0; /* Remove default top margin for heading within the box */
+    margin-bottom: 5px; /* Small space between heading and paragraph */
+    color: #0056b3; /* Matches your guide's heading color */
+    font-size: 1.2em; /* Slightly larger for emphasis */
+}
+
+.spell-details p {
+    margin-top: 0; /* Remove default top margin for paragraph within the box */
+    font-size: 0.95em; /* Slightly smaller text for details */
+    line-height: 1.4;
+}
+
+/* Modifier Class: Icon on Left (Default Flexbox behavior) */
+.spell-entry--left-icon {
+    flex-direction: row; /* Arranges items from left to right (icon then text) */
+}
+
+/* Modifier Class: Icon on Right (Reverses Flexbox order) */
+.spell-entry--right-icon {
+    flex-direction: row-reverse; /* Arranges items from right to left (text then icon) */
+}
+
+/* Optional: Adjust for very small screens if necessary, though Flexbox is quite robust */
+@media (max-width: 600px) {
+    .spell-entry {
+        flex-direction: column; /* Stack icon and text vertically on small screens */
+        text-align: center; /* Center content when stacked */
+    }
+    .spell-icon {
+        margin-bottom: 10px; /* Add space between icon and text when stacked */
+    }
+    /* Remove the specific left/right icon directions as they are now stacked */
+    .spell-entry--left-icon,
+    .spell-entry--right-icon {
+        flex-direction: column;
+    }
 }
