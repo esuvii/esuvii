@@ -204,10 +204,8 @@
     	</ul>
     	<p>To remove Salv I use the following macro:</p>
     	<div class="code-block">
-    		<pre><code>
-    			/cancelaura Blessing of Salvation
-    			/cancelaura Greater Blessing of Salvation
-    		</code></pre>
+    		<pre><code>/cancelaura Blessing of Salvation
+/cancelaura Greater Blessing of Salvation</code></pre>
     	</div>
     	<p>Some people like to include this in one of their ability macros, however personally I just have it on my bars and manually click it a few times before the pull.</p>
 
@@ -229,11 +227,17 @@
     		<li>Keep casting Searing Pain.</li>
     	</ul>
     	<p>If Vek'lor starts running at you, or the Warrior, or casts Arcane Burst, he may be in Melee Mode. If everyone is follows the strategy this is extremely rare, however please see the <a href="#melee-mode">Melee Mode</a>section for some suggestions about how to handle it.</p>
-    	<h3 id="stepbystep-explode">2.3 Explode Bug</h3>
-    	<p>Vek'lor will periodically cast Explode Bug. A fire animation will appear on the exploding bug, before it grows in size and then explodes. <a href="#fig4">Figure 4</a> shows this fire animation.</p>
     	<figure id="fig4">
+    		<img class="center-img" src="assets/resist-wa.webp" alt="My Searing Pain Resist WA.">
+    		<figcaption>Fig 4: My Searing Pain resist WeakAura.</figcaption>
+    	</figure>
+    	<p>I use a WeakAura that I wrote to announce in /yell if my Searing Pain resists when casting on Vek'lor. <a href="#fig4">Figure 4</a> shows how it looks. It is not required, but it is useful for indicating to the healers that you are having a tough time overcoming the initial Threat of the Warrior tank. You can import it here: <a href="https://wago.io/Qvo4g9stE" target="_blank" rel="noopener noreferrer">Vek'lor Searing Pain Resist</a></p>
+
+    	<h3 id="stepbystep-explode">2.3 Explode Bug</h3>
+    	<p>Vek'lor will periodically cast Explode Bug. A fire animation will appear on the exploding bug, before it grows in size and then explodes. <a href="#fig5">Figure 5</a> shows this fire animation.</p>
+    	<figure id="fig5">
     		<img class="center-img" src="assets/bug-on-fire.jpg" alt="A Scorpion about to explode.">
-    		<figcaption>Fig 4: A Scorpion targeted by Explode Bug.</figcaption>
+    		<figcaption>Fig 5: A Scorpion targeted by Explode Bug.</figcaption>
     	</figure>
     	<p>At this point you have a few options, and must make a judgement call:</p>
     	<ul>
@@ -241,25 +245,51 @@
     		<li><strong>Move:</strong> If the bug is not right on top of you then you may be able to move to avoid it.</li>
     		<li><strong>Death Coil:</strong> RNG option to make the bug move away from you. This requires quick reactions, and swapping targets, so I do not advise it for your first time tanking Twins.</li>
     	</ul>
-    	<figure id="fig5">
+    	<figure id="fig6">
     		<img class="center-img" src="assets/circle-move.jpg" alt="A circular path around Vek'lor.">
-    		<figcaption>Fig 4: An example path for avoiding mechanics.</figcaption>
+    		<figcaption>Fig 6: An example path for avoiding mechanics.</figcaption>
     	</figure>
-    	<p>If you are moving away from the bug, it is important you more in an arc that keeps your distance to Vek'lor fixed. If you move out of his range he will chase you triggering Melee Mode. If you move too close he may enter Melee Mode and Arcane Burst you. <a href="#fig5">Figure 5</a> shows the circular path around Vek'lor that you should restrict your movement to. If you are in range, while moving you could Shadowburn to compensate for the lost casts. However, this is likely unnecessary unless someone is close on Threat.</p>
+    	<p>If you are moving away from the bug, it is important you more in an arc that keeps your distance to Vek'lor fixed. If you move out of his range he will chase you triggering Melee Mode. If you move too close he may enter Melee Mode and Arcane Burst you. <a href="#fig6">Figure 6</a> shows the circular path around Vek'lor that you should restrict your movement to. If you are in range, while moving you could Shadowburn to compensate for the lost casts. However, this is likely unnecessary unless someone is close on Threat.</p>
     	<p>If you take the explosion damage, and your health drops low you can use your Healthstone. This is particularly useful if you are facing multiple mechanics at once, for example Blizzard and Explode Bug and a Shadow Bolt from Vek'lor. Keep in mind that your GFPP is now gone. You can either pop a new GFPP or save your potion CD. If you choose to save your potion CD, be ready to drink a GFPP if another Explode Bug is nearby - before you take damage from it.</p>
-    	<figure id="video1">
+    	<figure id="vid1">
     		<div class="video-responsive">
     			<iframe src="https://www.youtube.com/embed/CHGuKqlNPis?si=YLASUYg9ylmrIAxr" title="Explode Bug Death Coil" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     		</div>
 		    <figcaption>Video 1: Using Death Coil to avoid Explode Bug.</figcaption>
 		</figure>
-    	<p>Using Death Coil is a more advanced play. It has to be a quick reaction, and it is inconsistent due to the random direction the bug will move. However, it can be a useful tool if you cannot move, and pulling it off will make those who see it consider you a pro-gamer. <a href="#video1">Video 1</a> shows me performing the Death Coil.</p>
+    	<p>Using Death Coil is a more advanced play. It has to be a quick reaction, and it is inconsistent due to the random direction the bug will move. However, it can be a useful tool if you cannot move, and pulling it off will make those who see it consider you a pro-gamer. <a href="#vid1">Video 1:</a> shows me performing the Death Coil.</p>
     	<p>A good healer will notice you are about to take Explode Bug or Blizzard damage and start a big heal or Power Word: Shield you. A call of <em>"big heals on me"</em> or a healer saying <em>"big heals on your-name"</em> is great to ensure everyone knows the damage is coming.</p>
   		<p>The Warrior tank is AFK for most of this phase. If they are experienced with the fight they will kill the Scarabs/Scorpions around you, so that none are near enough to explode on you. Be aware that they do respawn.</p>
 
     	<h3 id="stepbystep-blizzard">2.4 Blizzard</h3>
+    	<p>Unlike Explode Bug, <strong>you should NOT stay still and tank the Blizzard</strong>. It ticks for ~1500 Frost damage. Your GFrPP will mitigate the first, and <em>maybe</em> the second, tick. You should follow similar movement to shown in <a href="#fig5">Figure 5</a> to ensure you are not moving too much closer or further from Vek'lor.</p>
+    	<p>It is not impossible to tank the Blizzard, but know you will be taking ~8000 damage over 10s (5 ticks). If you absolutely must stay in it, wait for your active GFrPP to be used up then pop another one. You will need really big heals during this time, and I really do not recommend it unless there is no other option.</p>
+    	<p><strong>Blizzard always spawns on a player.</strong> This is why in <a href="#positioning">Movement and Positioning</a> we will see that we are away from the DPS stack. This reduces the chance it spawns on us greatly. However, you may catch the edge of a Blizzard that has spawned on the Warrior tank or a healer.</p>
+    	<figure id="vid2">
+    		<div class="video-responsive">
+    			<iframe src="https://www.youtube.com/embed/CHGuKqlNPis?si=YLASUYg9ylmrIAxr" title="Avoiding Blizzard" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    		</div>
+		    <figcaption>Video 2: Moving out of Blizzard.</figcaption>
+		</figure>
+		<p>In <a href="#vid2">Video 2</a> you see an example of me moving out of Blizzard. We get the worst RNG here and an Explode Bug happens right where I move towards. I choose to tank the explosion since I consider avoiding the Blizzard a higher priority.</p>
+
     	<h3 id="stepbystep-doom">2.5 Curse of Doom</h3>
+    	<p>A bonus tool to help with initial Threat is Curse of Doom. Due to the variation of Teleport timings, it is not going to work consistently. The idea is to cast Doom while tanking Vek'lor, and it will pop during your <em>next</em> tanking phase.</p>
+    	<figure id="fig7">
+    		<img class="center-img" src="assets/doom.jpg" alt="Curse of Doom applied.">
+    		<figcaption>Fig 7: An example Curse of Doom.</figcaption>
+    	</figure>
+    	<p>The timing is not perfect, and it will take trial and error. <strong>I have found that casting around 20s before the Teleport window opens (~10s after the boss appears) works well</strong>, see <a href="#fig7">Figure 7</a>.</p>
+    	<p><strong>If you cast a little early</strong>, it will simply pop near the end of the other Warlock's tanking phase. That Warlock should have a lot of Threat, so there is no risk.</p>
+    	<p><strong>If you cast a little late</strong> it will still pop on your side, but it will be later into the tanking phase. This still boosts your Threat, but you likely already have a comfortable lead at that point.</p>
+    	<p>If my 20s timing isn't working, I recommend trying ~17/18s before the Teleport window opens. You can then gradually be greedier (earlier) as you get a feel for it.</p>
+    	<p>If Curse of Doom resists, or it is your final tanking phase, you can cast Curse of the Elements. This marginally helps both you and the opposite side Warlock overcome the 2k initial Threat. However, it will not always change the number of Searing Pain casts required to overtake the Warrior. You can also just use Elements if you don't want to have to think about Curse of Doom - just make sure you have a Threat lead before initially applying it.</p>
+    	<p>If you have a 3rd Warlock (a non-tank), you likely already have Elements up. In that case, the backup would be Curse of Shadow. Often Mages will swap to Arcane Missiles to ensure Ignite falls before the Twin Teleport. It is minor, but it does increase that damage.</p>
+
     	<h3 id="stepbystep-ending">2.6 Ending a Phase</h3>
+    	<p>If you keep casting Searing Pain right up until the boss Teleports away, there is a very small chance that your final cast will land during the same 10ms spell batching window as the Teleport. If this happens, you could be top threat on Vek'lor after he appears on the opposite side. This is rare, but I have seen it a couple of times.</p>
+    	<p>Once the Teleport window opens, DPS will stop (they swap sides) and you no longer need to build Threat. For safety I stop casting Searing Pain after the Teleport window opens. You can just wait for the Teleport, still avoiding mechanics of course. Keep an eye on the Threat meter to ensure there aren't any DoTs that might cause a DPS to overtake you - although this has never been an issue for me.</p>
+    	<p><strong>Congratulations! You just tanked a phase! Now loop back to the start of these steps and await the next tanking phase!</strong></p>
     </section>
 
     <section id="positioning">
