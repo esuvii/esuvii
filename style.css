@@ -16,12 +16,6 @@ h1 {
     font-size: 2.5em;
     margin-bottom: 30px;
 }
-iframe {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
-    height: auto;
-}
 p {
     margin-bottom: 1em;
 }
@@ -226,4 +220,44 @@ figcaption {
     .spell-details {
         max-width: 100%;
     }
+}
+
+/* Styling for Code Blocks */
+.code-block {
+    background-color: #2b2d31; /* Dark grey, similar to Discord's background */
+    color: #f0f0f0; /* Light grey text color for contrast */
+    padding: 15px; /* Padding around the code */
+    border-radius: 8px; /* Slightly rounded corners */
+    font-family: 'Consolas', 'Monaco', 'Lucida Console', monospace; /* Monospace font for code readability */
+    font-size: 0.9em; /* Slightly smaller font size for code */
+    margin: 20px 0; /* Adds vertical space above and below the block */
+    overflow-x: auto; /* Adds a horizontal scrollbar if the code line is too long */
+    white-space: pre-wrap; /* Ensures long lines wrap if needed while preserving whitespace */
+    word-break: break-all; /* Breaks long words to prevent overflow, especially in wrapped lines */
+}
+
+/* Ensure the <pre> tag inside doesn't add extra margins */
+.code-block pre {
+    margin: 0;
+}
+
+/* Aspect Ratio Container for Videos (16:9) */
+.video-responsive {
+    position: relative; /* Essential for positioning the iframe inside */
+    padding-bottom: 56.25%; /* This creates the 16:9 aspect ratio (9 / 16 = 0.5625) */
+    height: 0; /* Important: collapse the height, padding creates the space */
+    overflow: hidden; /* Hides anything that might go outside this box */
+    max-width: 100%; /* Ensures the video scales down on smaller screens */
+    margin: 20px auto; /* Centers the video container horizontally and adds vertical spacing */
+    background-color: #000; /* Optional: A black background that might show briefly while loading */
+}
+
+/* The iframe itself will fill the responsive container */
+.video-responsive iframe {
+    position: absolute; /* Positions the iframe relative to its .video-responsive parent */
+    top: 0;
+    left: 0;
+    width: 100%; /* Makes the iframe take 100% width of its parent */
+    height: 100%; /* Makes the iframe take 100% height of its parent */
+    border: 0; /* Removes any default iframe border */
 }

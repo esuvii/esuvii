@@ -30,7 +30,7 @@
             	<ul>
             		<li><a href="#stepbystep-preteleport">2.1 Pre-Teleport</a></li>
             		<li><a href="#stepbystep-teleport">2.2 Teleport</a></li>
-            		<li><a href="#stepbystep-explode">2.3 Bug Explode</a></li>
+            		<li><a href="#stepbystep-explode">2.3 Explode Bug</a></li>
             		<li><a href="#stepbystep-blizzard">2.4 Blizzard</a></li>
             		<li><a href="#stepbystep-doom">2.5 Curse of Doom</a></li>
             		<li><a href="#stepbystep-ending">2.6 Ending a Phase</a></li>
@@ -132,7 +132,7 @@
 				<img src="assets/icon-explodebug.jpg" alt="Explode Bug Icon" class="spell-icon">
 				<div class="spell-details">
 				    <h4>Explode Bug</h4>
-				    <p>Picks a Scorpion within 30 yds to Explode after 4s.<br>
+				    <p>Picks a Scarab/Scorpion within 30 yds to Explode after 4s.<br>
 				    This deals 2813-3187 Fire damage in a 15 yd radius.<br>
 				    Mitigated by our GFPP.</p>
 				</div>
@@ -174,7 +174,7 @@
 				<img src="assets/icon-mutatebug.jpg" alt="Mutate Bug Icon" class="spell-icon">
 				<div class="spell-details">
 				    <h4>Mutate Bug</h4>
-				    <p>Picks a Scorpion within 30 yds and enrages it.<br>
+				    <p>Picks a Scarab/Scorpion within 30 yds and enrages it.<br>
 				    These bugs deal 1800% damage and have 300% HP.<br>
 				    As a Warlock we should try to ignore these.</p>
 				</div>
@@ -194,10 +194,69 @@
 
     <section id="stepbystep">
     	<h2>2. Step-By-Step Tanking a Phase</h2>
+    	<p>In this section we will cover your rotation, and how to handle a tanking phase. For where to stand, with annotated images, and example videos of tanking left/right side, please see the <a href="#positioning">Movement and Positioning</a> section.</p>
+    	<p>Before the fight begins please double check:</p>
+    	<ul>
+    		<li>Your SR set is equipped.</li>
+    		<li>You have Prayer of Shadow Protection, with at least 6 minutes left.</li>
+    		<li>You have Gift of Arthas, GAPP, GFrPP, and GFFP. We will discuss these consumables in more detail in the <a href="#consumables">Consumable List</a> section.</li>
+    		<li>Blessing of Salvation is removed (Alliance only).</li>
+    	</ul>
+    	<p>To remove Salv I use the following macro:</p>
+    	<div class="code-block">
+    		<pre><code>
+    			/cancelaura Blessing of Salvation
+    			/cancelaura Greater Blessing of Salvation
+    		</code></pre>
+    	</div>
+    	<p>Some people like to include this in one of their ability macros, however personally I just have it on my bars and manually click it a few times before the pull.</p>
 
     	<h3 id="stepbystep-preteleport">2.1 Pre-Teleport</h3>
+    	<p>Let's start from before Vek'lor teleports to you. The Warrior on your side is tanking Vek'nilash and you are waiting for the Teleport. There is no need to rush, you have around 20-30s to prepare before the next phase:</p>
+    	<ol>
+    		<li>Life Tap back to full mana. It takes approximately 4000 mana to tank each phase, so you should <strong>NEVER Life Tap while tanking Vek'lor</strong>. You can do this now, during your AFK phase.</li>
+    		<li>Stand in the correct place (see <a href="#positioning">Movement and Positioning</a>), you may have to adjust a little.</li>
+    		<li>Before the window opens cast Shadow Ward. This will help with mitigation for the first Shadow Bolt you recieve after taking aggro of Vek'lor.</li>
+    		<li>Ensure you have <strong>Vek'lor</strong> targeted. Remember, this boss is currently on the opposite side.</li>
+    		<li>Before the Teleport window opens start spamming Searing Pain. This ensures you begin your cast as soon as possible after Teleport.</li>
+    	</ol> 
     	<h3 id="stepbystep-teleport">2.2 Teleport</h3>
-    	<h3 id="stepbystep-explode">2.3 Bug Explode</h3>
+    	<p>Vek'lor has teleported and you should have immediately started casting Searing Pain. Assuming DPS all left before the Teleport, the Warrior will have ~2.1k Threat on Vek'lor - this is the initial Threat that the closest player gets (modified by Defensive Stance). The boss be inactive for ~1.5s, during this the Warrior should immediately run out to a similar distance as you.</p>
+    	<ul>
+    		<li>Keep casting Searing Pain.</li>
+    		<li>Vek'lor should not move, and will begin casting Shadow Bolts on the Warrior tank. This is normal. It is okay for the Warrior to take 2-3 Shadow Bolts before you are top Threat - your healers will be prepared for this.</li>
+    		<li>After 3-4 casts you should overtake the Warrior and be the top Threat.</li>
+    		<li>Keep casting Searing Pain.</li>
+    	</ul>
+    	<p>If Vek'lor starts running at you, or the Warrior, or casts Arcane Burst, he may be in Melee Mode. If everyone is follows the strategy this is extremely rare, however please see the <a href="#melee-mode">Melee Mode</a>section for some suggestions about how to handle it.</p>
+    	<h3 id="stepbystep-explode">2.3 Explode Bug</h3>
+    	<p>Vek'lor will periodically cast Explode Bug. A fire animation will appear on the exploding bug, before it grows in size and then explodes. <a href="#fig4">Figure 4</a> shows this fire animation.</p>
+    	<figure id="fig4">
+    		<img class="center-img" src="assets/bug-on-fire.jpg" alt="A Scorpion about to explode.">
+    		<figcaption>Fig 4: A Scorpion targeted by Explode Bug.</figcaption>
+    	</figure>
+    	<p>At this point you have a few options, and must make a judgement call:</p>
+    	<ul>
+    		<li>Tank the Explosion: If the bug is too close, or you can't avoid it due to the wall or Blizzard, you can ignore it and take the damage. If your GFPP is fully active you should absorb most of it.</li>
+    		<li>Move: If the bug is not right on top of you then you may be able to move to avoid it.</li>
+    		<li>Death Coil: RNG option to make the bug move away from you. This requires quick reactions, and swapping targets, so I do not advise it for your first time tanking Twins.</li>
+    	</ul>
+    	<figure id="fig5">
+    		<img class="center-img" src="assets/circle-move.jpg" alt="A circular path around Vek'lor.">
+    		<figcaption>Fig 4: An example path for avoiding mechanics.</figcaption>
+    	</figure>
+    	<p>If you are moving away from the bug, it is important you more in an arc that keeps your distance to Vek'lor fixed. If you move out of his range he will chase you triggering Melee Mode. If you move too close he may enter Melee Mode and Arcane Burst you. <a href="#fig5">Figure 5</a> shows the circular path around Vek'lor that you should restrict your movement to. If you are in range, while moving you could Shadowburn to compensate for the lost casts. However, this is likely unnecessary unless someone is close on Threat.</p>
+    	<p>If you take the explosion damage, and your health drops low you can use your Healthstone. This is particularly useful if you are facing multiple mechanics at once, for example Blizzard and Explode Bug and a Shadow Bolt from Vek'lor. Keep in mind that your GFPP is now gone. You can either pop a new GFPP or save your potion CD. If you choose to save your potion CD, be ready to drink a GFPP if another Explode Bug is nearby - before you take damage from it.</p>
+    	<figure id="video1">
+    		<div class="video-responsive">
+    			<iframe src="https://www.youtube.com/embed/CHGuKqlNPis?si=YLASUYg9ylmrIAxr" title="Explode Bug Death Coil" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    		</div>
+		    <figcaption>Video 1: Using Death Coil to avoid Explode Bug.</figcaption>
+		</figure>
+    	<p>Using Death Coil is a more advanced play. It has to be a quick reaction, and it is inconsistent due to the random direction the bug will move. However, it can be a useful tool if you cannot move, and pulling it off will make those who see it consider you a pro-gamer. <a href="#video1">Video 1</a> shows me performing the Death Coil.</p>
+    	<p>A good healer will notice you are about to take Explode Bug or Blizzard damage and start a big heal or Power Word: Shield you. A call of <em>"big heals on me"</em> or a healer saying <em>"big heals on your-name"</em> is great to ensure everyone knows the damage is coming.</p>
+  		<p>The Warrior tank is AFK for most of this phase. If they are experienced with the fight they will kill the Scarabs/Scorpions around you, so that none are near enough to explode on you. Be aware that they do respawn.</p>
+
     	<h3 id="stepbystep-blizzard">2.4 Blizzard</h3>
     	<h3 id="stepbystep-doom">2.5 Curse of Doom</h3>
     	<h3 id="stepbystep-ending">2.6 Ending a Phase</h3>
