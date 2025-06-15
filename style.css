@@ -222,22 +222,22 @@ figcaption {
     }
 }
 
-/* Styling for WoW Macro Code Blocks */
+/* Styling for Code Blocks */
 .code-block {
     background-color: #2b2d31; /* Dark grey, similar to Discord's background */
     color: #f0f0f0; /* Light grey text color for contrast */
     
-    /* MODIFIED: Reduced padding for a "very small padding" effect */
-    padding: 10px; 
+    /* MODIFIED: Adjusted padding for all sides. 
+       Try 8px for a slightly tighter look, or even 5px if you want it very minimal. */
+    padding: 6px; 
     
     border-radius: 8px; /* Slightly rounded corners */
     font-family: 'Consolas', 'Monaco', 'Lucida Console', monospace; /* Monospace font for code readability */
     font-size: 0.9em; /* Slightly smaller font size for code */
-    
-    /* NEW: Makes the block's width fit its content */
-    width: fit-content; 
-    /* MODIFIED: Centers the block horizontally while maintaining vertical spacing */
-    margin: 20px auto; 
+
+    /* These properties ensure the block fits content and is centered */
+    width: fit-content; /* Makes the block's width only as wide as its content */
+    margin: 20px auto; /* Centers the block horizontally, keeps 20px vertical margin */
 
     overflow-x: auto; /* Adds a horizontal scrollbar if the code line is too long */
     white-space: pre-wrap; /* Ensures long lines wrap if needed while preserving whitespace */
