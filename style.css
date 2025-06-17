@@ -11,6 +11,9 @@ h1, h2, h3 {
     color: #0056b3;
     padding-top: 20px;
 }
+section h3 {
+    color: #0056b3;
+}
 h1 {
     text-align: center;
     font-size: 2.5em;
@@ -221,99 +224,95 @@ figcaption {
         max-width: 100%;
     }
 }
-
 /* --- Alternative Item Entry Styles --- */
 
 /* Main container for each item row */
-/* Main container for each item row */
 .item-entry {
-    display: flex; /* Enables Flexbox for column layout */
-    align-items: center; /* CHANGED: Aligns items vertically in the center of the container */
-    gap: 15px; /* Provides spacing between the icon, stats, and notes columns */
+    display: flex; /* Enables Flexbox for arranging primary group and notes */
+    align-items: center; /* Aligns item-primary-group and item-details-notes vertically in the center */
+    gap: 15px; /* Spacing between the primary group and the notes column */
     
-    padding: 15px; /* Internal spacing within the item entry box */
-    margin-bottom: 20px; /* Space between different item entries */
+    padding: 15px;
+    margin-bottom: 20px;
     
-    background-color: #f9f9f9; /* A light grey background for the box */
-    border: 1px solid #ddd; /* A thin light border */
-    border-radius: 8px; /* Slightly rounded corners */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* A subtle, light shadow */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
+
+/* NEW: Wrapper for Icon + Stats (always present) */
+.item-primary-group {
+    display: flex; /* Enables Flexbox to put icon and stats side-by-side */
+    align-items: flex-start; /* Aligns the top of the icon with the top of the stats text */
+    gap: 10px; /* Space between icon and stats */
+    flex: 1.5; /* Allows this group to grow/shrink, similar to previous item-details-stats */
+    min-width: 0; /* Ensures content can shrink */
+}
+
 /* Styling for the Item Icon */
 .item-icon {
-    width: 48px; /* Slightly smaller icon size to fit 3 columns better */
+    width: 48px;
     height: 48px;
-    flex-shrink: 0; /* Prevents the icon from shrinking on smaller screens */
-    object-fit: contain; /* Ensures the image fits within its bounds */
-    
-    /* Reusing border and shadow styles similar to spell-icon */
+    flex-shrink: 0;
+    object-fit: contain;
     border: 1px solid #999;
     border-radius: 4px;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Styling for the Name/Stats column */
+/* Styling for the Name/Stats column (now inside item-primary-group) */
 .item-details-stats {
-    flex: 1.5; /* Allows this column to grow and shrink, giving it a bit more space */
-    min-width: 0; /* Ensures content can shrink if necessary (important for flex items) */
+    flex: 1; /* Allows stats text to take up remaining space beside the icon */
+    min-width: 0; /* Ensures text can wrap if needed */
 }
 
 .item-details-stats h4 {
-    margin-top: 0; /* Remove default top margin */
-    margin-bottom: 5px; /* Small space below heading */
-    color: #0056b3; /* Matches your guide's heading color */
-    font-size: 1.1em; /* Slightly smaller font for item names than spell names */
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #0056b3;
+    font-size: 1.1em;
 }
 
 .item-details-stats p {
-    margin-top: 0; /* Remove default top margin */
-    font-size: 0.9em; /* Smaller text for stats */
+    margin-top: 0;
+    font-size: 0.9em;
     line-height: 1.4;
 }
 
 /* Styling for the Notes/Explanation column */
 .item-details-notes {
-    flex: 2; /* Gives this column the most room, as notes can be longer */
-    min-width: 0; /* Ensures content can shrink if necessary */
+    flex: 2; /* Gives this column more room */
+    min-width: 0;
 }
 
 .item-details-notes p {
-    margin: 0; /* Remove default margins */
+    margin: 0;
     font-size: 1em; /* CHANGED: Full size font */
     line-height: 1.4;
     color: #555;
     font-style: normal; /* ADDED: Ensures no italicizing */
 }
-/* --- Responsive Adjustments for Item Entries --- */
-@media (max-width: 768px) { /* This breakpoint works well for tablets and smaller */
-    .item-entry {
-        flex-direction: column; /* Stacks the main sections (item-primary-mobile-row, item-details-notes) vertically */
-        align-items: flex-start; /* Aligns stacked main sections to the left */
-        text-align: left; /* Ensures text alignment is natural when stacked */
-    }
 
-    /* NEW: Style for the wrapper containing icon and stats in mobile view */
-    .item-primary-mobile-row {
-        display: flex; /* Enables flexbox to put icon and stats side-by-side */
-        align-items: center; /* Vertically centers the icon and stats text */
-        gap: 10px; /* Space between icon and stats */
-        width: 100%; /* Ensures this row takes full width */
-        margin-bottom: 10px; /* Adds space between this row and the notes below */
+/* --- Responsive Adjustments for Item Entries --- */
+@media (max-width: 768px) {
+    .item-entry {
+        flex-direction: column; /* Stacks the main sections (item-primary-group, item-details-notes) vertically */
+        align-items: flex-start; /* Aligns stacked main sections to the left */
+        text-align: left;
     }
     
-    /* Adjustments for elements within the new mobile row */
-    .item-icon {
-        margin-bottom: 0; /* No bottom margin needed here, gap handles spacing */
-    }
-    .item-details-stats {
-        flex: 1; /* Allows stats to take up available space next to the icon */
+    /* When item-primary-group is stacked, it will take full width */
+    .item-primary-group {
+        width: 100%;
+        margin-bottom: 10px; /* Adds space between the icon/stats row and the notes below */
+        /* Its internal flex (icon next to stats) remains active */
     }
 
-    /* Adjustments for the notes section when stacked */
     .item-details-notes {
         width: 100%; /* Makes notes section take full width when stacked */
         flex: none; /* Resets flex sizing from desktop view */
-        margin-bottom: 0; /* No margin after the last stacked section */
+        margin-bottom: 0;
     }
 }
 
