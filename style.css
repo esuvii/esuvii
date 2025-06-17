@@ -225,6 +225,13 @@ figcaption {
     }
 }
 /* --- Alternative Item Entry Styles --- */
+/* NEW: Container for the group of item entries */
+.item-list-group {
+    /* Adjust these margins to control spacing above and below the entire list */
+    margin-top: 25px; 
+    margin-bottom: 25px; 
+    /* No need for display: grid or gap here, as item-entry's margin-bottom handles spacing */
+}
 
 /* Main container for each item row */
 .item-entry {
