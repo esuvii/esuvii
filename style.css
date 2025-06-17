@@ -225,9 +225,10 @@ figcaption {
 /* --- Alternative Item Entry Styles --- */
 
 /* Main container for each item row */
+/* Main container for each item row */
 .item-entry {
     display: flex; /* Enables Flexbox for column layout */
-    align-items: flex-start; /* Aligns items to the top of the container */
+    align-items: center; /* CHANGED: Aligns items vertically in the center of the container */
     gap: 15px; /* Provides spacing between the icon, stats, and notes columns */
     
     padding: 15px; /* Internal spacing within the item entry box */
@@ -238,7 +239,6 @@ figcaption {
     border-radius: 8px; /* Slightly rounded corners */
     box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* A subtle, light shadow */
 }
-
 /* Styling for the Item Icon */
 .item-icon {
     width: 48px; /* Slightly smaller icon size to fit 3 columns better */
@@ -279,27 +279,40 @@ figcaption {
 
 .item-details-notes p {
     margin: 0; /* Remove default margins */
-    font-size: 0.9em;
+    font-size: 1em; /* CHANGED: Full size font */
     line-height: 1.4;
-    color: #555; /* Slightly muted text color for notes */
+    color: #555;
+    font-style: normal; /* ADDED: Ensures no italicizing */
 }
 /* --- Responsive Adjustments for Item Entries --- */
 @media (max-width: 768px) { /* This breakpoint works well for tablets and smaller */
     .item-entry {
-        flex-direction: column; /* Stacks the columns vertically on small screens */
-        align-items: flex-start; /* Aligns stacked items to the left */
+        flex-direction: column; /* Stacks the main sections (item-primary-mobile-row, item-details-notes) vertically */
+        align-items: flex-start; /* Aligns stacked main sections to the left */
         text-align: left; /* Ensures text alignment is natural when stacked */
     }
+
+    /* NEW: Style for the wrapper containing icon and stats in mobile view */
+    .item-primary-mobile-row {
+        display: flex; /* Enables flexbox to put icon and stats side-by-side */
+        align-items: center; /* Vertically centers the icon and stats text */
+        gap: 10px; /* Space between icon and stats */
+        width: 100%; /* Ensures this row takes full width */
+        margin-bottom: 10px; /* Adds space between this row and the notes below */
+    }
+    
+    /* Adjustments for elements within the new mobile row */
     .item-icon {
-        margin-bottom: 10px; /* Adds space below the icon when stacked */
+        margin-bottom: 0; /* No bottom margin needed here, gap handles spacing */
     }
-    .item-details-stats,
-    .item-details-notes {
-        width: 100%; /* Makes these sections take full width when stacked */
-        flex: none; /* Resets flex sizing when stacked */
-        margin-bottom: 10px; /* Adds space between stacked sections */
+    .item-details-stats {
+        flex: 1; /* Allows stats to take up available space next to the icon */
     }
+
+    /* Adjustments for the notes section when stacked */
     .item-details-notes {
+        width: 100%; /* Makes notes section take full width when stacked */
+        flex: none; /* Resets flex sizing from desktop view */
         margin-bottom: 0; /* No margin after the last stacked section */
     }
 }
