@@ -228,9 +228,9 @@ figcaption {
 
 /* Main container for each item row */
 .item-entry {
-    display: flex; /* Enables Flexbox for arranging primary group and notes */
+    display: flex;
     align-items: center; /* Aligns item-primary-group and item-details-notes vertically in the center */
-    gap: 15px; /* Spacing between the primary group and the notes column */
+    gap: 15px;
     
     padding: 15px;
     margin-bottom: 20px;
@@ -241,13 +241,13 @@ figcaption {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* NEW: Wrapper for Icon + Stats (always present) */
+/* Wrapper for Icon + Stats */
 .item-primary-group {
-    display: flex; /* Enables Flexbox to put icon and stats side-by-side */
-    align-items: flex-start; /* Aligns the top of the icon with the top of the stats text */
-    gap: 10px; /* Space between icon and stats */
-    flex: 1.5; /* Allows this group to grow/shrink, similar to previous item-details-stats */
-    min-width: 0; /* Ensures content can shrink */
+    display: flex;
+    align-items: center; /* CHANGED: Vertically centers the icon with the stats block */
+    gap: 10px;
+    flex: 1.5;
+    min-width: 0;
 }
 
 /* Styling for the Item Icon */
@@ -263,8 +263,13 @@ figcaption {
 
 /* Styling for the Name/Stats column (now inside item-primary-group) */
 .item-details-stats {
-    flex: 1; /* Allows stats text to take up remaining space beside the icon */
-    min-width: 0; /* Ensures text can wrap if needed */
+    flex: 1;
+    min-width: 0;
+    
+    /* ADDED: Makes content inside (h4 and p) vertically centered */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .item-details-stats h4 {
@@ -282,38 +287,49 @@ figcaption {
 
 /* Styling for the Notes/Explanation column */
 .item-details-notes {
-    flex: 2; /* Gives this column more room */
+    flex: 2;
     min-width: 0;
 }
 
 .item-details-notes p {
     margin: 0;
-    font-size: 1em; /* CHANGED: Full size font */
+    font-size: 1em;
     line-height: 1.4;
     color: #555;
-    font-style: normal; /* ADDED: Ensures no italicizing */
+    font-style: normal;
 }
 
 /* --- Responsive Adjustments for Item Entries --- */
 @media (max-width: 768px) {
     .item-entry {
-        flex-direction: column; /* Stacks the main sections (item-primary-group, item-details-notes) vertically */
-        align-items: flex-start; /* Aligns stacked main sections to the left */
+        flex-direction: column;
+        align-items: flex-start;
         text-align: left;
     }
     
-    /* When item-primary-group is stacked, it will take full width */
     .item-primary-group {
         width: 100%;
-        margin-bottom: 10px; /* Adds space between the icon/stats row and the notes below */
-        /* Its internal flex (icon next to stats) remains active */
+        margin-bottom: 10px;
     }
 
     .item-details-notes {
-        width: 100%; /* Makes notes section take full width when stacked */
-        flex: none; /* Resets flex sizing from desktop view */
+        width: 100%;
+        flex: none;
         margin-bottom: 0;
     }
+}
+
+/* Item Quality Colors */
+.item-quality-uncommon {
+    color: #1eff00; /* Uncommon (Green) */
+}
+
+.item-quality-rare {
+    color: #0070dd; /* Rare (Blue) */
+}
+
+.item-quality-epic {
+    color: #a335ee; /* Epic (Purple) */
 }
 
 /* Styling for Code Blocks */
