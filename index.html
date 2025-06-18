@@ -1278,7 +1278,7 @@
 			    </div>
 			    <div class="item-details-notes">
 			        <p><strong>Source: ZG</strong><br>
-			        A bit of a meme item the promises to vastly improve your consistency in overcoming the Warrior's initial Threat. Unfortunately, the CD is just too long: You can only reliably use it <em>every other</em> tanking phase. While I do NOT recommend this, it is better than nothing. The unusual (and exciting) use cases for this item deserve a guide of their own, however this is not one of them.</p>
+			        A bit of a meme item that promises to vastly improve your consistency in overcoming the Warrior's initial Threat. Unfortunately, the CD is just too long: You can only reliably use it <em>every other</em> tanking phase. While I do NOT recommend this, it is better than nothing. The unusual (and exciting) use cases for this item deserve a guide of their own, however this is not one of them.</p>
 			    </div>
 			</div>
 		</div>
@@ -1509,20 +1509,106 @@
     		<li><strong>No Blood Pact for the Warrior tank.</strong> Realistically, we have a much easier time surviving in this fight than the Warrior tank. Vek'nilash can deal a huge amount of damage, especially if it is your Warrior tank's first time tanking this it can be tough. You MUST discuss these options with your raid leader. Will the Warrior have enough HP without the +42 Stam from Blood Pact? Don't make this decision alone then surprise your raid on the day, especially in Hardcore.</li>
     	</ul>
     	<p>If you're playing with a debuff limit (not a factor in HC), then this is likely already your default Talent spec. If you're playing on a realm with Dual Spec then it can be a decent choice to swap to. Once again, it is important that your raid is aware that you will not be bringing Blood Pact for the fight. This build trades some party HP for a small personal HP gain and more Threat.</p>
+    	<p>Note that if you have more than two Warlocks, a DPS Warlock could provide Blood Pact to mitigate this.</p>
 
     	<h3 id="talents-mdruin">6.3 MD/Ruin</h3>
-    	<p>A classic spec for tanking Twin Emps is <a href="https://classicdb.ch/?talent#IZbxuzgxoxZxx0tMbz" target="_blank" rel="noopener noreferrer">MD/Ruin</a>.</p>
+    	<p>A classic spec for tanking Twin Emps is <a href="https://classicdb.ch/?talent#IZbxuzgxoxZxx0tMbz" target="_blank" rel="noopener noreferrer">MD/Ruin</a>. The Talents themself are similar DS/Ruin, except with the 9 spare points used to unlock Master Demonologist - which means we will keep our pet out instead of Demonic Sacrifice.</p>
     	<figure id="fig21">
     		<img class="center-img" src="assets/twins/talents/mdruin.jpg" alt="The MD/Ruin Talents.">
     		<figcaption>Fig 21: The MD/Ruin Talents.</figcaption>
     	</figure>
     	<p>In <a href="#fig21">Figure 21</a> we see the MD/Ruin Talents. The crux of this spec is Master Demonologist, with it we will gain +60 SR just by having our Felhunter alive.</p>
-    	<h3 id="talents-soullink">6.4 Soul Link</h3>
-    	https://classicdb.ch/?talent#IZbxuzgxotZxx0tMb
-    	<h3 id="talents-impimp">6.5 Imp Imp</h3>
-    	twins specific https://classicdb.ch/?talent#Ix0bZfxhzZVx0tMxkx
-    	beginner https://classicdb.ch/?talent#IE0bVMbZsxZxx0tMbz
+    	<figure id="fig22">
+    		<img class="center-img" src="assets/twins/felhunter-position.jpg" alt="Felhunter Positioning.">
+    		<figcaption>Fig 22: Example Felhunter postioning.</figcaption>
+    	</figure>
+    	<p><a href="#fig22">Figure 22</a> shows an example of how you can position your Felhunter. In this example the Left Warlock mid-Vek'lor tanking phase, and the Right Warlock is waiting while their side's Warrior tanks Vek'nilash. While the Felhunter just needs to be alive, and within 100 yds to not despawn, to recieve the buff you have some considerations:</p>
+    	<ul>
+    		<li>It should be away from players, such that it is unlikely to be take damage from Blizzard or Explode Bug. The path DPS will move through is approximately shown by the blue shaded region. </li>
+    		<li>It should be in range of the Healers on your side, just so they can heal it if it takes damage. If your Felhunter dies you will lose the +60 SR buff.</li>
+    		<li>You should avoid positioning Felhunter on the stairs, or out of line-of-sight of the boss positions. It is rare but it has been suggested that a complex path between Vek'lor and any unit can trigger <a href="#melee-mode">Melee Mode</a>.</li>
+    	</ul>
+    	<p>You should position your Felhunter before the fight. <strong>It must be in both Stay and Passive modes. Be very careful of this.</strong> It's not uncommon to have Passive or Follow bound to a something easily misclicked, such as mouse wheel. If you accidentally make your Felhunter Follow you mid-tanking phase you will have no opportunity to reposition it until after Vek'lor Teleports away.</p>
+    	<ul>
+    		<li>If you make your Felhunter Follow by mistake, it is very likely to take Blizzard/Explode Bug damage and die.</li>
+    		<li>Even worse if you accidentally set it to Attack or Defensive. It will run to attack Vek'lor which can both mess with initial Threat after teleport as well as potentially trigger <a href="#melee-mode">Melee Mode</a>.</li>
+    	</ul>
+    	<p>If your Felhunter dies, but Fel Domination is off CD, you can quickly resummon it using the following macro:</p>
+    	<div class="code-block"><pre><code>#showtooltip Summon Felhunter
+/cast [mod:shift] Fel Domination
+/cast Summon Felhunter</code></pre></div>
+		<p>With this macro holding Shift will automatically use Fel Domination for a faster resummon. Not using Shift will summon the pet normally, i.e. for setting up before the fight.</p>
+		<p><strong>Advantages:</strong></p>
+		<ul>
+			<li><strong>Master Demonologist gives +60 SR.</strong> If you're struggling with building your SR set, or were called up to tank last minute, this can be a huge help. It also gives the opportunity to focus more on Spell Hit and Stam, and can off-set the need to wear Engineer only Trinkets or the BoE SR Rings.</li>
+			<li><strong>Demonic Embrace gives +15% Stam.</strong> As discussed in <a href="#talents-dsruin">DS/Ruin</a>.</li>
+			<li><strong>Improved Healthstone.</strong></li>
+			<li><strong>Plays like DS/Ruin for DPS fights.</strong> If you do not have Dual Spec, then for the other boss fights you can Demonic Sacrifice your Succubus and play the same way as DS/Ruin.</li>
+		</ul>
+		<p><strong>Disadvantages:</strong></p>
+		<ul>
+			<li><strong>Felhunter dying means -60 SR.</strong> This is a huge penalty. If your Felhunter dies you will suddenly start taking a lot more damage. <strong>It is crucial that you have over 210 SR without Felhunter</strong>, so that even if it dies you never take full damage Shadow Bolts. Make sure your healers are aware that they need to keep an eye on your pet's Health.</li>
+			<li><strong>No Blood Pact for the Warrior tank.</strong> As with <a href="#talents-dsruin">DS/Ruin</a>, it is important that your Warrior tank and raid leader know that there will be no Blood Pact in the party.</li>
+			<li><strong>No focus on Searing Pain improvements.</strong> This is relatively minor. It has the same Searing Pain output as <a href="#talents-smruin">SM/Ruin</a> and I have never struggled to hold Threat with that build.</li>
+			<li><strong>No Suppression.</strong> I.e. you have no increase to Curse of Doom's Spell Hit to improve its consistency. Again, this is relatively minor.</li>
+		</ul>
+		<p>Aside from the complications due to the Felhunter, this is a really good Talent build.</p>
 
+    	<h3 id="talents-soullink">6.4 Soul Link</h3>
+    	<p>The next spec we'll consider is <a href="https://classicdb.ch/?talent#IZbxuzgxotZxx0tMb" target="_blank" rel="noopener noreferrer">Soul Link</a>.</p>
+    	<figure id="fig23">
+    		<img class="center-img" src="assets/twins/talents/soullink.jpg" alt="The Soul Link Talents.">
+    		<figcaption>Fig 23: The Soul Link Talents.</figcaption>
+    	</figure>
+    	<p><a href="#fig23">Figure 23</a> shows the Soul Link Talents. As you can see it is almost identical to <a href="#talents-mdruin">MD/Ruin</a> with one exception: Instead of taking Ruin we go one point deeper into Demonology for Soul Link. Without Ruin, your Searing Pain crits only deal 150% damage instead of 200% damage, however you gain a ton of extra mitigation. This is because 30% of all damage you take will instead be transferred to your Felhunter.</p>
+    	<p>Let's return to the nightmare RNG, no protection potion or heals, combination we considered in the <a href="#gearing-stats">Stat Priority</a> section. Previously we suggested that a maximum damage Shadow Bolt, Blizzard tick, Explode Bug combo would deal ~8170 damage. <strong>With Soul Link you instead would take just ~5720 damage, with your Felhunter also taking ~2450 damage.</strong></p>
+    	<p>This is a huge difference. However, your Felhunter will be taking constant damage through your tanking phase. This means that healers must focus on keeping it alive, splitting their heals 70/30 between you and the Felhunter.</p>
+    	<p>Remember that Soul Link is not active by default. You will need to use the spell each time you summon your demon.</p>
+    	<p><strong>Advantages:</strong></p>
+		<ul>
+			<li><strong>Soul Link moves 30% of damage taken to your Felhunter.</strong> A huge level of mitigation, which can provide a big safety net in unlucky scenarios where you are hit with many mechanics in rapid succession.</li>
+			<li><strong>Master Demonologist gives +60 SR.</strong>.</li>
+			<li><strong>Demonic Embrace gives +15% Stam.</strong>.</li>
+			<li><strong>Improved Healthstone.</strong></li>
+		</ul>
+		<p><strong>Disadvantages:</strong></p>
+		<ul>
+			<li><strong>Felhunter dying means -60 SR AND losing Soul Link.</strong> This could be devastating, considering you could suddenly be taking 40-50% more damage. If your healers are not prepared this is a wild swing in incoming damage that can cause major issues.</li>
+			<li><strong>Two targets to heal.</strong> Generally a good healer team with pet bars shown will not have trouble keeping the Felhunter alive. However, if you take multiple mechanics the healers should focus on keeping you alive, which may mean neglecting the also increased damage on your pet causing it to die.</li>
+			<li><strong>No Blood Pact for the Warrior tank.</strong> It is important that your Warrior tank and raid leader know that there will be no Blood Pact in the party.</li>
+			<li><strong>The lowest Threat spec here.</strong> Without Ruin this is by far the lowest Threat spec here. When overcoming the Warrior's initial Threat a crit can compensate for a resist, however this is much less of a factor without Ruin. Searing Pain Threat is still great, and so long as DPS are watching their Threat meters it should be fine once Threat is established. That reduced consistency after Teleport though can be quite noticable.</li>
+		</ul>
+		<p>While the extreme mitigation that Soul Link offers is enticing, I return to the core principles of this guide: Simplicity and consistency. When it works, it can be a huge help, however there are a lot more things to focus on with this spec which can make performing the fight more complex for both yourself and the healers. One thing I love about our strategy, combined with <a href="#talents-smruin">SM/Ruin</a>, is that it is extremely simple - for the most part you just stand there spamming Searing Pain while being bombed with heals.</p>
+
+    	<h3 id="talents-impimp">6.5 Imp Imp</h3>
+    	Finally, a Talent spec of my own machinations. <em>What if we took <a href="#talents-smruin">SM/Ruin</a> but removed all the points that are irrelevant to Twins and put them into things that are?</em> Et voilà, we have <a href="https://classicdb.ch/?talent#Ix0bZfxhzZVx0tMxkx" target="_blank" rel="noopener noreferrer">Imp Imp/Emberstorm</a>.
+    	<figure id="fig24">
+    		<img class="center-img" src="assets/twins/talents/impimpemberstorm.jpg" alt="The Imp Imp/Emberstorm Talents.">
+    		<figcaption>Fig 24: The Imp Imp/Emberstorm Talents.</figcaption>
+    	</figure>
+    	<p><a href="#fig24">Figure 24</a> shows the Imp Imp/Emberstorm build. With this spec we run Imp for Blood Pact, however that Blood Pact is now +54 Stam due to 3/3 Improved Imp. We combine this with Demonic Embrace for even more Stamina. We still have Suppresion to increase the Curse of Doom consistency, but additionally we have 5/5 Improved Searing Pain and 5/5 Emberstorm to buff our Searing Pain Threat.</p>
+    	<p>A very small trick prior to <a href="#positioning-pull">The Pull</a> that this spec enables for the Left Warlock is: Summon Voidwalker, Sacrifice him, Fel Domination, then Summon Imp. While this does provide an extra absorb shield, on top of Shadow Ward, it is extremely minor. Remember we have plenty of mitigation against Shadow Bolt so it is largely unnecessary. I would NOT recommend this trick in general, since it can serve to overcomplicate the pull for a minor gain. Simple is safe. However, it is an option if you want to use it.</p>
+    	<p><strong>Advantages:</strong></p>
+		<ul>
+			<li><strong>The highest possible Stamina, with 3/3 Blood Pact and 5/5 Demonic Embrace.</strong> This provides both us, and the Warrior tank, with +54 Stam in addition to a +15% Stam increase for ourselves. Let's look back at the T2 + Crafted SR set shown in <a href="#gearing-example">Example SR Sets</a>. <strong>This puts us at over ~10100 Health!</strong> Compared to a case of no Blood Pact <em>and</em> no Demonic Embrace, this accounts for ~1600 HP (with world buffs, but no Kings).</li>
+			<li><strong>+10% Searing Pain damage from Emberstorm.</strong>. While not quite as large a damage buff as Demonic Sacrifice, this is still a noticable increase.</li>
+			<li><strong>5/5 Suppression.</strong>. +10% Spell Hit for Curse of Doom, making it less likely to resist.</li>
+			<li><strong>Improved Healthstone.</strong></li>
+		</ul>
+		<p><strong>Disadvantages:</strong></p>
+		<ul>
+			<li><strong>Highly tailored for Twin Emps.</strong> Outside of Twin Emps this isn't a very good DPS build.</li>
+			<li><strong>No increase to SR.</strong> Does not provide Master Demonologist for the +60 SR bonus.</li>
+			<li><strong>Not quite the highest Threat spec.</strong> While Emberstorm is good it is not quite as high of a Searing Pain buff as is possible from <a href="#talents-dsruin">DS/Ruin.</a></li>
+		</ul>
+		<p><strong>If I was using this spec just for Twins, it would easily be my number one choice.</strong> If you're respeccing specifically for this fight, or you want to use your Dual Spec just for Twins, it can be an excellent choice.</p>
+		<p>There is also a more widely applicable version of this spec, that goes deeper into Affliction but doesn't take Emberstorm, <a href="https://classicdb.ch/?talent#IE0bVMbZsxZxx0tMbz" target="_blank" rel="noopener noreferrer">Imp Imp/Utility.</a></p>
+    	<figure id="fig25">
+    		<img class="center-img" src="assets/twins/talents/impimputility.jpg" alt="The Imp Imp/Utility Talents.">
+    		<figcaption>Fig 25: The Imp Imp/Utility Talents.</figcaption>
+    	</figure>
+    	<p><a href="#fig25">Figure 25</a> shows the Utility variant of the Imp Imp spec. This spec is one that I often recommend to beginner Hardcore 60 Warlocks who are less concerned with damage and want to just survive dungeon grinding and their first few raids. It plays just like <a href="#talents-smruin">SM/Ruin</a> just taking Improved Imp and Demonic Embrace instead of Shadow Mastery. With 5/5 Fel Concentration it is also viable for open world mob grinding.</p>
+    	<p>Aside from lacking the Searing Pain damage buff from Emberstorm, this has all the other advantages of the Imp Imp/Emberstorm variant. For Twins specifically it is still superior to <a href="#talents-smruin">SM/Ruin</a> due to the much increased Stamina. If you want a more general Dual Spec, that can be used to provide your party with Improved Imp on other fights too, then this can be a good choice.</p>
     </section>
 
     <section id="melee-mode">
