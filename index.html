@@ -67,6 +67,11 @@
             		<li><a href="#gearing-runed-stygian">5.4 Runed Stygian Patterns</a></li>
             	</ul>
             <li><a href="#talents">6. Talents</a></li>
+            		<li><a href="#talents-smruin">6.1 SM/Ruin</a></li>
+            		<li><a href="#talents-dsruin">6.2 DS/Ruin</a></li>
+            		<li><a href="#talents-mdruin">6.3 MD/Ruin</a></li>
+            		<li><a href="#talents-soullink">6.4 Soul Link</a></li>
+            		<li><a href="#talents-impimp">6.5 Imp Imp</a></li>
             <li><a href="#melee-mode">7. Melee Mode</a></li>
             <li><a href="#pushback">8. Spell Pushback Analysis</a></li>
             	<ul>
@@ -208,6 +213,7 @@
     	<p>You will also have healers split between the left/right sides.</p>
     	<p>While it is possible to tank Twins with a single Warlock, situated in the middle of the room and swapping sides, I will not cover it here. That setup is not recommended, since our goal is a consistent and safe strategy.</p>
     	<p><em>Note that throughout this guide I refer to "Warrior tanks" to distinguish them from the Warlock tank, however it is possible for a geared Feral Druid to tank Vek'nilash instead of a Warrior.</em></p>
+    	<p>Warlock is the canonical choice for tanking Vek'lor: Each point of Searing Pain damage generates two Threat (2x modifier), Demon Armor provides extra SR, we have Shadow Ward for extra mitigation, and our Talents allow even more survivability/Threat.</p>
     </section>
 
     <section id="stepbystep">
@@ -520,7 +526,7 @@
     		<img class="center-img" src="assets/twins/t2-sr-set.jpg" alt="T2 + Crafted SR Set.">
     		<figcaption>Fig 17: An example SR set using pre-AQ gear and crafted SR pieces.</figcaption>
     	</figure>
-    	<p><a href="#fig17">Figure 17</a> shows the aforementioned example SR set. With world buffs, consumes, raid buffs, and Flask of Titans, this provides over 9000 HP, 284 SR, and 4% Spell Hit. These values do NOT include Blessing of Kings or other faction specific buffs.</p>
+    	<p><a href="#fig17">Figure 17</a> shows the aforementioned example SR set. With world buffs, consumes, raid buffs, and Flask of Titans, this provides over 9000 HP, 284 SR, and 4% Spell Hit. These values do NOT include Blessing of Kings or other faction specific buffs. I have assumed we have the +42 Stam from Blood Pact, which contributes ~500 HP.</p>
     	<p>I purposefully omitted Juno's Shadow and Eidolan Talisman, as these are rare/expensive BoE items. I also omitted the fantastic +10 SR leg/head enchants since these may not be available if you are not in Naxx content phase yet. Alternative items, and enchants, are detailed in the <a href="#gearing-items">Item Alternatives/Options</a> section. Note that Sixty Upgrades does not understand the Deathmist 2-set bonus.</p>
     	<p>For comparison, here is how an end-game SR set might look like with all content available: <a href="https://sixtyupgrades.com/era/set/24xqVozhj1vkXaQZN3Gi4J" target="_blank" rel="noopener noreferrer">End-Game SR</a></p>
     	<figure id="fig18">
@@ -1228,6 +1234,18 @@
 			    </div>
 			</div>
 			<div class="item-entry">
+			    <div class="item-primary-group"> <img src="assets/twins/gear/demons-blood.jpg" alt="Demon's Blood" class="item-icon">
+			        <div class="item-details-stats">
+				        <h4><a href="https://www.wowhead.com/classic/item=10779/demons-blood" target="_blank" rel="noopener noreferrer" class="item-quality-uncommon">Demon's Blood</a></h4>
+				        <p>+10 Shadow Resistance</p>
+			        </div>
+			    </div>
+			    <div class="item-details-notes">
+			        <p><strong>Source: Quest</strong><br>
+			        If you are not an Engineer, this is the best SR Trinket you can access. It's a reward from the long Blasted Lands quest chain that culminates in <a href="https://www.wowhead.com/classic/quest=3628/you-are-rakhlikh-demon" target="_blank" rel="noopener noreferrer">You Are Rakh'likh, Demon</a>. Beware of this quest chain in Hardcore. It is extremely dangerous. You will need to research the fights and bring a geared group that understands them.</p>
+			    </div>
+			</div>
+			<div class="item-entry">
 			    <div class="item-primary-group"> <img src="assets/twins/gear/ward-of-the-elements.jpg" alt="Ward of the Elements" class="item-icon">
 			        <div class="item-details-stats">
 				        <h4><a href="https://www.wowhead.com/classic/item=12065/ward-of-the-elements" target="_blank" rel="noopener noreferrer" class="item-quality-uncommon">Ward of the Elements</a></h4>
@@ -1439,6 +1457,67 @@
 
     <section id="talents">
     	<h2>6. Talents</h2>
+    	<p>There are many viable Talent builds, and what you use largely depends on:</p>
+    	<ul>
+    		<li>Does your realm have Dual Specialization (e.g. Anniversary), and do you want to use it here?</li>
+    		<li>Are you on a server with a debuff limit (e.g. old Classic Era)? Note that this is not a factor on any Hardcore realms, since there is no buff or debuff cap.</li>
+    	</ul>
+    	<p><strong>Personally I run <a href="#talents-smruin">SM/Ruin</a></strong>, which is my standard Talent spec for HC raiding. We'll cover many builds, discussing their advantages and disadvantages. I have successfully tanked Twin Emps with all of these the specs listed here, and I am quite sure it would be possible to defeat the fight without a single Talent point spent!</p>
+    	<p>If I was playing with Dual Spec, and was using it specifically for this fight alone, <strong>I would Dual Spec <a href="#talents-impimp">Imp Imp</a></strong>.</p><
+    	<p>By far the most impactful Talent is <strong>Destructive Reach</strong>, for an extra 6 yds range on Searing Pain. Without it pulling Vek'lor at the start of the fight can be tricky, possibly resulting in an unexpected early pull. All of the talent builds shown here have 2/2 Destructive Reach.</p>
+
+    	<h3 id="talents-smruin">6.1 SM/Ruin</h3>
+    	<p>First let's look at my favourite build: <a href="https://classicdb.ch/?talent#IE0rVRboVZZxx0tMbz" target="_blank" rel="noopener noreferrer">SM/Ruin</a></p>
+    	<figure id="fig19">
+    		<img class="center-img" src="assets/twins/talents/smruin.jpg" alt="The SM/Ruin Talents.">
+    		<figcaption>Fig 19: The SM/Ruin Talents.</figcaption>
+    	</figure>
+    	<p><a href="#fig19">Figure 19</a> shows a screenshot of the Talents. The core benefit of this build is that it allows us to run Imp. You'll want to keep your Imp Passive and Phase Shifted for Twins, and positioned as discussed in <a href="#positioning">Movement and Positioning</a>.</p>
+    	<p><strong>Advantages:</strong></p>
+    	<ul>
+    		<li><strong>Blood Pact provides +42 Stam for both you and the Warrior tank.</strong> With world buffs (but not Kings) this is ~500 Health.</li>
+    		<li><strong>5/5 Suppression gives +10% Spell Hit to Curse of Doom.</strong> Without this Curse of Doom is noticably more unreliable.</li>
+    		<li><strong>It's an excellent HC raiding spec.</strong> You can use SM/Ruin as your main talent spec for HC raiding. In full BiS it is barely behind DS/Ruin on DPS (~3%), you get longer range on Curse, provide Blood Pact, and have a great build for open world content.</li>
+    		<li><strong>Sufficient Threat output.</strong> While this isn't a Threat focused build, I have NEVER had Threat issues using SM/Ruin. It's important to note that while some other builds buff Searing Pain damage (i.e. Threat), they do not increase our Spell Hit. The build has no problem overcoming the Warrior threat. Outside of a fight with DPS pushing close on Threat meters in order to parse this has more than sufficient output.</li>
+    	</ul>
+    	<p><strong>Disadvantages:</strong></p>
+    	<ul>
+    		<li><strong>Not the highest Threat spec.</strong> We do have Ruin (crits do 2x damage), and 2/5 Improved Searing Pain (+4% Spell Crit). However, we do not take Demonic Sacrifice or Emberstorm, both of which are large Threat improvements. This can make a difference, especially if you are a fresh tank entering a raid with very geared DPS. However, it is the DPS's responsibility to ensure they do no rip threat.</li>
+    		<li><strong>Not the highest Stam or SR spec.</strong> Our Blood Pact is great, but it is possible to get even more Stam from other builds. Through Master Demonologist it is also possible to gain an extra +60 SR. although that has its own drawbacks.</li>
+    	</ul>
+    	<p>Note that you may be unable to run this spec if you are on a realm with a debuff limit, and no Dual Spec, e.g. on old Classic Era servers. Without Dual Spec you'll have to run this for the entire raid, and outside of Twins this spec focuses on keeping up Corruption. Your raid may not allow a debuff slot for Corruption. That said, it would still function the same on Twin Emps.</p>
+
+    	<h3 id="talents-dsruin">6.2 DS/Ruin</h3>
+    	<p>Next let's look at <a href="https://classicdb.ch/?talent#IZbxhzgboZxx0tMbz" target="_blank" rel="noopener noreferrer">DS/Ruin</a>.</p>
+    	<figure id="fig20">
+    		<img class="center-img" src="assets/twins/talents/dsruin.jpg" alt="The DS/Ruin Talents.">
+    		<figcaption>Fig 20: The DS/Ruin Talents.</figcaption>
+    	</figure>
+    	<p>With this build we will not run a pet, instead we Demonic Sacrifice our Imp to increase our Searing Pain damage by 15%. Notice in <a href="#fig20">Figure 20</a> that we still have 9 talent points unspent. We have two choices:</p>
+    	<ul>
+    		<li>Put them into Affliction to get Suppression, Improved Life Tap, and possibly Improved Corruption. This is the most common choice if this is your main DPS spec. For Twins this option will give extra Spell Hit for Curse of Doom.</li>
+    		<li>Go deeper into Destruction to get 5/5 Emberstorm, further increasing our Searing Pain damage by another 10%. For Twins specifically this is the better choice, but you may prefer the former option if you use this spec on other fights.</li>
+    	</ul>
+    	<p><strong>Advantages:</strong></p>
+    	<ul>
+    		<li><strong>The +15% Stamina from Demonic Embrace is a lot.</strong> Let's consider the example T2 + Crafted SR set shown in <a href="#gearing-example">Example SR Sets</a>. We lose ~500 HP without Blood Pact, but we gain ~850 HP from 5/5 Demonic Embrace. Remember this is assuming world buffs but no Blessing of Kings. That's a net ~350 HP gain compared to SM/Ruin.</li>
+    		<li><strong>Higher Searing Pain damage.</strong> Demonic Sacrifice is quite a substantial gain to our Threat. although not increasing the consistency in terms of Spell Hit it will make holding Threat easier. Emberstorm even more so.</li>
+    		<li><strong>Improved Healthstone.</strong> This one is very minor, but if we do need to use our Healthstone we'll heal for a little bit more.</li>
+    	</ul>
+    	<p><strong>Disadvantages:</strong></p>
+    	<ul>
+    		<li><strong>No Blood Pact for the Warrior tank.</strong> Realistically, we have a much easier time surviving in this fight than the Warrior tank. If the Warrior tank dies, it's a raid wipe. Vek'nilash can deal a huge amount of damage, especially if it is your Warrior tank's first time tanking this it can be tough. You MUST discuss these options with your raid leader. Will the Warrior have enough HP without the +42 Stam from Blood Pact? Don't make this decision alone then surprise your raid on the day, especially in Hardcore.</li>
+    	</ul>
+    	<p>If you're playing with a debuff limit (not a factor in HC), then this is likely already your default Talent spec. If you're playing on a realm with Dual Spec then it can be a decent choice to swap to. Once again, it is important that your raid is aware that you will not be bringing Blood Pact for the fight. This build trades some party HP for a small personal HP gain and more Threat.</p>
+
+    	<h3 id="talents-mdruin">6.3 MD/Ruin</h3>
+    	https://classicdb.ch/?talent#IZbxuzgxoxZxx0tMbz
+    	<h3 id="talents-soullink">6.4 Soul Link</h3>
+    	https://classicdb.ch/?talent#IZbxuzgxotZxx0tMb
+    	<h3 id="talents-impimp">6.5 Imp Imp</h3>
+    	twins specific https://classicdb.ch/?talent#Ix0bZfxhzZVx0tMxkx
+    	beginner https://classicdb.ch/?talent#IE0bVMbZsxZxx0tMbz
+
     </section>
 
     <section id="melee-mode">
