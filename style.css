@@ -391,3 +391,55 @@ figcaption {
     height: 100%;
     border: 0;
 }
+
+/* Styles for the introductory paragraph and Twitch icon alignment */
+.intro-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+/* Style for the introductory paragraph inside the flex container */
+.intro-flex-container .intro-text {
+    margin: 0;
+    flex-grow: 1; 
+    max-width: calc(100% - 60px);
+}
+
+/* Style for the Twitch icon link container */
+.twitch-icon-link {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    flex-shrink: 0;
+}
+
+/* Style for the Twitch icon image */
+.twitch-icon {
+    width: 35px; 
+    height: 35px; 
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect for the Twitch icon */
+.twitch-icon-link:hover .twitch-icon {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    .intro-flex-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .intro-flex-container .intro-text {
+        margin-bottom: 10px;
+        max-width: 100%;
+    }
+    .twitch-icon-link {
+        margin-left: 0;
+    }
+}
