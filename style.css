@@ -124,7 +124,7 @@ hr {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #0056b3;
+    background-color: #8787ed;
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
@@ -136,7 +136,7 @@ hr {
     transition: background-color 0.3s ease;
 }
 .fixed-back-to-top:hover {
-    background-color: #003d7a;
+    background-color: #6A6AD3;
 }
 html {
     scroll-behavior: smooth;
