@@ -46,16 +46,16 @@ hr {
     margin-bottom: 15px;
 }
 .contents-box ul {
-    list-style: none; /* Remove default bullet points */
+    list-style: none;
     padding: 0;
 }
 .contents-box ul li {
     margin-bottom: 8px;
 }
-.contents-box ul ul { /* For nested sub-lists (subchapters) */
-    margin-left: 25px; /* Indent subchapters */
+.contents-box ul ul {
+    margin-left: 25px;
     margin-top: 5px;
-    list-style: disc; /* Add disc bullets for subchapters */
+    list-style: disc;
 }
 .contents-box a {
     text-decoration: none;
@@ -80,97 +80,80 @@ hr {
 }
 
 .fixed-back-to-top {
-    position: fixed; /* Makes the element stay in place regardless of scroll */
-    bottom: 20px;    /* 20 pixels from the bottom of the viewport */
-    right: 20px;     /* 20 pixels from the right of the viewport */
-    background-color: #0056b3; /* Blue background, matching your headings */
-    color: white;    /* White arrow color */
-    padding: 10px 15px; /* Padding inside the button */
-    border-radius: 5px; /* Slightly rounded corners */
-    text-decoration: none; /* Remove underline */
-    font-size: 1.5em; /* Larger arrow size */
-    line-height: 1; /* Adjust line height for better vertical centering */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow */
-    z-index: 1000; /* Ensures it's on top of other content */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.5em;
+    line-height: 1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 .fixed-back-to-top:hover {
-    background-color: #003d7a; /* Darker blue on hover */
+    background-color: #003d7a;
 }
 html {
     scroll-behavior: smooth;
 }
 
-/* Centered Image Without Text Wrap */
 .center-img {
-    display: block; /* Ensures the image behaves as a block-level element, taking full horizontal space */
-    margin: 0 auto; /* Centers the block-level element horizontally within its container */
-    max-width: 100%; /* Ensures the image scales down on smaller screens */
-    height: auto;    /* Maintains aspect ratio when scaling */
-    /* Optional: Add some vertical spacing if needed */
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 figure {
-    /* ... other centering properties ... */
-    text-align: center; /* This centers any inline content within the figure, including the figcaption's text */
+    text-align: center;
 }
 
 figcaption {
-    /* ... other styling ... */
-    text-align: center; /* This explicitly centers the text within the figcaption itself */
+    text-align: center;
 }
 
 
-
-/* NEW: Container for the group of spell entries */
 .spell-list-group {
     display: grid;
     grid-template-columns: max-content;
     justify-content: center;
-    /* MODIFIED: If you use .spell-list-group, its gap replaces spell-entry's margin-bottom */
-    gap: 20px; /* Changed from 15px to 20px, feel free to adjust for vertical spacing between spell entries */
+    gap: 20px;
     margin-top: 25px;
     margin-bottom: 25px;
     max-width: 100%;
 }
 
-/* Base Styles for each Spell Entry */
 .spell-entry {
     display: flex;
     align-items: center;
-    /* MODIFIED: Increase the gap between icon and text */
-    gap: 25px; /* Changed from 15px to 25px, feel free to adjust */
-    /* MODIFIED: Increase the padding around the content within the box */
-    padding: 20px; /* Changed from 15px to 20px, feel free to adjust */
-
-    /* ... rest of your .spell-entry styles ... */
-    margin-bottom: 25px; /* Keep this if you still want space below each entry when not in a group */
+    gap: 25px;
+    padding: 20px;
+    margin-bottom: 25px;
     background-color: #fcfcfc;
     border: 1px solid #eee;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
-/* Styles for the Spell Icon */
 .spell-icon {
     width: 64px;
     height: 64px;
     flex-shrink: 0;
     object-fit: contain;
-    transform: scale(1.3); /* Makes the icon visually 30% larger */
-    border: 2px solid #999; /* A thin, slightly darker grey border */
-    border-radius: 4px; /* A slight curve on the corners */
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); /* A small drop shadow */
+    transform: scale(1.3);
+    border: 2px solid #999;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Styles for the Spell Text Details */
 .spell-details {
-    /* REMOVE THIS LINE: flex-grow: 1; - You should have removed this in the last step. */
-    /* Ensure text wraps within a reasonable column, allowing it to stretch within the fixed spell-entry width */
-    max-width: 500px; /* Adjust this value as needed. This will be the max width of the text column */
-                      /* It's important for the 'flex-direction: row' layout to prevent one line from making the box too wide */
-    flex-grow: 1; /* ADD THIS BACK! Now that spell-entry has a fixed width, spell-details can grow to fill it */
+    max-width: 500px;
+    flex-grow: 1;
 }
 
 .spell-details h4 {
@@ -186,35 +169,30 @@ figcaption {
     line-height: 1.4;
 }
 
-/* Modifier Class: Icon on Left (Default Flexbox behavior) */
 .spell-entry--left-icon {
     flex-direction: row;
 }
 
-/* Modifier Class: Icon on Right (Reverses Flexbox order) */
 .spell-entry--right-icon {
     flex-direction: row-reverse;
 }
 
-/* Adjust for very small screens */
 @media (max-width: 600px) {
     .spell-list-group {
         grid-template-columns: 1fr;
-        /* MODIFIED: Ensure vertical gap scales down on small screens if desired */
-        gap: 15px; /* Smaller gap when stacked */
+        gap: 15px;
     }
     .spell-entry {
         flex-direction: column;
         text-align: center;
         width: auto;
-        /* MODIFIED: Adjust padding for stacked layout on small screens */
-        padding: 15px; /* Smaller padding when stacked */
+        padding: 15px;
     }
     .spell-icon {
-        margin-bottom: 10px; /* Space between icon and text when stacked */
-        transform: scale(1.0); /* Resetting scale on small screens to original size */
-        border: 2px solid #bbb; /* Lighter border when smaller */
-        box-shadow: none; /* No shadow when smaller */
+        margin-bottom: 10px;
+        transform: scale(1.0);
+        border: 2px solid #bbb;
+        box-shadow: none;
     }
     .spell-entry--left-icon,
     .spell-entry--right-icon {
@@ -224,19 +202,14 @@ figcaption {
         max-width: 100%;
     }
 }
-/* --- Alternative Item Entry Styles --- */
-/* NEW: Container for the group of item entries */
 .item-list-group {
-    /* Adjust these margins to control spacing above and below the entire list */
-    margin-top: 25px; 
-    margin-bottom: 25px; 
-    /* No need for display: grid or gap here, as item-entry's margin-bottom handles spacing */
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
-/* Main container for each item row */
 .item-entry {
     display: flex;
-    align-items: center; /* Aligns item-primary-group and item-details-notes vertically in the center */
+    align-items: center;
     gap: 15px;
     
     padding: 15px;
@@ -248,16 +221,14 @@ figcaption {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Wrapper for Icon + Stats */
 .item-primary-group {
     display: flex;
-    align-items: center; /* CHANGED: Vertically centers the icon with the stats block */
+    align-items: center;
     gap: 10px;
     flex: 1.5;
     min-width: 0;
 }
 
-/* Styling for the Item Icon */
 .item-icon {
     width: 48px;
     height: 48px;
@@ -268,12 +239,10 @@ figcaption {
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Styling for the Name/Stats column (now inside item-primary-group) */
 .item-details-stats {
     flex: 1;
     min-width: 0;
     
-    /* ADDED: Makes content inside (h4 and p) vertically centered */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -292,7 +261,6 @@ figcaption {
     line-height: 1.4;
 }
 
-/* Styling for the Notes/Explanation column */
 .item-details-notes {
     flex: 2;
     min-width: 0;
@@ -306,7 +274,6 @@ figcaption {
     font-style: normal;
 }
 
-/* --- Responsive Adjustments for Item Entries --- */
 @media (max-width: 768px) {
     .item-entry {
         flex-direction: column;
@@ -326,63 +293,55 @@ figcaption {
     }
 }
 
-/* Item Quality Colors */
 .item-quality-uncommon {
-    color: #1eff00; /* Uncommon (Green) */
+    color: #1eff00;
 }
 
 .item-quality-rare {
-    color: #0070dd; /* Rare (Blue) */
+    color: #0070dd;
 }
 
 .item-quality-epic {
-    color: #a335ee; /* Epic (Purple) */
+    color: #a335ee;
 }
 
-/* Styling for Code Blocks */
 .code-block {
-    background-color: #2b2d31; /* Dark grey, similar to Discord's background */
-    color: #f0f0f0; /* Light grey text color for contrast */
+    background-color: #2b2d31;
+    color: #f0f0f0;
     
-    /* MODIFIED: Adjusted padding for all sides. 
-       Try 8px for a slightly tighter look, or even 5px if you want it very minimal. */
     padding: 6px; 
     
-    border-radius: 8px; /* Slightly rounded corners */
-    font-family: 'Consolas', 'Monaco', 'Lucida Console', monospace; /* Monospace font for code readability */
-    font-size: 0.9em; /* Slightly smaller font size for code */
+    border-radius: 8px;
+    font-family: 'Consolas', 'Monaco', 'Lucida Console', monospace;
+    font-size: 0.9em;
 
-    /* These properties ensure the block fits content and is centered */
-    width: fit-content; /* Makes the block's width only as wide as its content */
-    margin: 20px auto; /* Centers the block horizontally, keeps 20px vertical margin */
+    width: fit-content;
+    margin: 20px auto;
 
-    overflow-x: auto; /* Adds a horizontal scrollbar if the code line is too long */
-    white-space: pre-wrap; /* Ensures long lines wrap if needed while preserving whitespace */
-    word-break: break-all; /* Breaks long words to prevent overflow, especially in wrapped lines */
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
 }
 
-/* Ensure the <pre> tag inside doesn't add extra margins */
 .code-block pre {
     margin: 0;
 }
 
-/* Aspect Ratio Container for Videos (16:9) */
 .video-responsive {
-    position: relative; /* Essential for positioning the iframe inside */
-    padding-bottom: 56.25%; /* This creates the 16:9 aspect ratio (9 / 16 = 0.5625) */
-    height: 0; /* Important: collapse the height, padding creates the space */
-    overflow: hidden; /* Hides anything that might go outside this box */
-    max-width: 100%; /* Ensures the video scales down on smaller screens */
-    margin: 20px auto; /* Centers the video container horizontally and adds vertical spacing */
-    background-color: #000; /* Optional: A black background that might show briefly while loading */
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 20px auto;
+    background-color: #000;
 }
 
-/* The iframe itself will fill the responsive container */
 .video-responsive iframe {
-    position: absolute; /* Positions the iframe relative to its .video-responsive parent */
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Makes the iframe take 100% width of its parent */
-    height: 100%; /* Makes the iframe take 100% height of its parent */
-    border: 0; /* Removes any default iframe border */
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
