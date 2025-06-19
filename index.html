@@ -9,7 +9,7 @@
 <body>
     <h1>Welcome to my HC Twin Emps Tanking Guide!</h1>
 
-    <p>IF YOU ARE READING THIS YOU ARE EARLY. CONGRATULATIONS! THE GUIDE IS IN CONSTRUCTION AND WILL BE DONE SOON TM.</p>
+    <p>A collection of everything I have learned over years of tanking Twins.</p>
 
     <div class="contents-box" id="contents">
         <h2>Contents</h2>
@@ -18,6 +18,7 @@
             	<ul>
             		<li><a href="#preface-goal">0.1 The Goal of This Guide</a></li>
             		<li><a href="#preface-about">0.2 About the Author</a></li>
+            		<li><a href="#preface-feedback">0.3 Questions and Feedback</a></li>
             	</ul>
             <li><a href="#basics">1. The Basics</a></li>
             	<ul>
@@ -109,6 +110,9 @@
         <p><strong>We have NEVER had a Warlock tank die on Twins.</strong></p>
         <p>Through HC I have tanked in a BWL level SR set, absolute BiS SR gear, fresh 60 + crafted SR gear, and one time when I forgot to equip SR gear.</p>
         <p><em>While there is no single highest authority on this fight, I believe there is a strong case that I have the most HC experience.</em></p>
+
+        <h3 id="preface-feedback">0.3 Questions and Feedback</h3>
+        <p>If you have any questions, or any feedback, please do not hesitate to reach out to me. You can find me as <em>esuvii</em> on Discord, or stop by my <a href="https://www.twitch.tv/esuvii/" target="_blank" rel="noopener noreferrer">Twitch stream</a> and I will do my best to help. If there's anything I have missed, any typos/mistakes, or any broken links I would really appreciate the feedback!</p>
     </section>
 
     
@@ -1629,7 +1633,7 @@
     		<div class="video-responsive">
     			<iframe src="https://www.youtube.com/embed/9dgi6JdcFlU?si=ja4ixMstPl7xkLdC" title="Warrior in range of Arcane Burst" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     		</div>
-		    <figcaption>Video 5: A Warrior in range of Arcane Burst, triggering Melee Mode. <em>Credit to Pools on Defias Pillager for providing this footage.</em></figcaption>
+		    <figcaption>Video 5: A Warrior in range of Arcane Burst, triggering Melee Mode.<br><em>Credit to Pools on Defias Pillager for providing this footage.</em></figcaption>
 		</figure>
 		<p><a href="#vid5">Video 5</a> shows an example of this. As we see here it's not just about top Threat being too close. <strong>Anyone being too close can cause Melee Mode, including pets.</strong> This is why it is vital your pet is on Passive, and you don't accidentally send them in to attack. This is particularly important for Felhunter builds, since the Felhunter will run into melee if it is on Defensive.</p>
 		<p><em>If you have any further knowledge on Melee Mode, or some good clips of it happening, please reach out to me so I can expand this section!</em></p>
@@ -1665,7 +1669,7 @@
     		<div class="video-responsive">
     			<iframe src="https://www.youtube.com/embed/yP7bsNaHQr4?si=1DBGcf9qJzjMF0wa" title="Seanlocked vs Vek'lor Melee Mode" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     		</div>
-		    <figcaption>Video 6: Another example of Melee Mode. <em>Credit to Seanlock on Defias Pillager for providing this footage.</em></figcaption>
+		    <figcaption>Video 6: Another example of Melee Mode.<br><em>Credit to Seanlock on Defias Pillager for providing this footage.</em></figcaption>
 		</figure>
 		<p>At roughly the 11 second timestamp in <a href="#vid6">Video 6</a> we see an example of Arcane Burst knocking the Warlock tank up onto the ramp. This was a particularly challenging example of Melee Mode, where the boss melees the Warlock prior to the Arcane Burst.</p>
 		<p>Often, Arcane Burst will send you to a distance that is reasonable to tank the boss at. In many cases the Melee Mode will end here, and you can simply remain in your new position and continue tanking the boss.</p>
@@ -1687,16 +1691,120 @@
 
     <section id="pushback">
     	<h2>8. Spell Pushback Analysis</h2>
+    	<p>A common question is: Should we use Concentration Aura, or the PVP gloves, to mitigate spell pushback? The answer may surprise you, <strong>I recommend running 0% spell pushback mitigation!</strong> Before we discuss that, let's briefly explain what spell pushback is.</p>
+    	<p>The first time you are hit while casting a spell, your cast time will be reset by some amount:</p>
+    	<ul>
+    		<li>If you are over 1s into a cast, then your cast bar will be "pushed back" by 1s. For example, if you are hit 1.3s into casting Searing Pain you will be rest back to 0.3s into the cast.</li>
+    		<li>If you are under 1s into a cast, then your cast bar will be reset to zero. For example, if you are hit 0.1s into casting Searing Pain you will be reset back to the beginning of the cast.</li>
+    	</ul>
+    	<p>The second hit will instead push you back by just 0.8s, the third by 0.6s, the next by 0.4s, the next by 0.2s. However, since Vek'lor's Shadow Bolt cast time is 1.6s, which is higher than our Searing Pain cast time of 1.5s, we only need to consider the case where we are hit once during the cast (1s pushback).</p>
+    	<p>We have the following ways to gain a chance to resist the spell pushback effect:</p>
+    	<ul>
+    		<li><strong><a href="https://www.wowhead.com/classic/spell=19746/concentration-aura" target="_blank" rel="noopener noreferrer">Concentration Aura</a>:</strong> Untalented this gives a 35% chance for party members to ignore spell pushback.</li>
+    		<li><strong><a href="https://www.wowhead.com/classic/spell=20256/improved-concentration-aura" target="_blank" rel="noopener noreferrer">Improved Concentration Aura</a>:</strong> At 3/3 Talent points this increases the pushback resistance chance to 50%.</li>
+    		<li><strong><a href="https://www.wowhead.com/classic/item=17564/knight-lieutenants-dreadweave-gloves" target="_blank" rel="noopener noreferrer">Warlock PVP Gloves</a>:</strong> 50% chance for Searing Pain to ignore pushback resistance. Available at PVP Rank 7, with a higher quality version (with the same effect) unlocked at Rank 12.</li>
+
+    	</ul>
 
     	<h3 id="pushback-results">8.1 Results</h3>
+    	<p>The results here are perhaps unintuitive until you think about it:</p>
+    	<ul>
+    		<li><strong>The best setup is both Improved Concentration Aura AND PVP gloves.</strong> This gives a 100% chance to ignore spell pushback.</li>
+    		<li><strong>The second best is to use neither!</strong> That is, do NOT use any form of Concentration Aura and do NOT use the PVP gloves.* Having 0% pushback resistance is better than having a partial chance.</li>
+    		<li><strong>The worst setup is any combination that does not reach 100% pushback resistance.</strong></li>
+    	</ul>
+    	<p><strong>With zero pushback resistance your cast time syncs with Vek'lors</strong>, meaning that after the first few casts <strong>your effective Searing Pain cast time becomes 1.6s</strong>. That is just a 0.1s increase, or ~6.7%, which is very minor.</p>
+    	<p>For Horde the choice is simple, you don't have Paladins, so do NOT wear the PVP gloves. This is also true for Alliance on Hardcore servers where the PVP gloves are unavailable.</p>
+    	<p>For Alliance on non-Hardcore servers you can choose to wear the PVP gloves, so long as your party's Paladin has 3/3 Improved Concentration Aura. This can be a good choice for improving the consistency with which you overtake the Warrior tank's initial Threat. However, do note that it requires you to wear the PVP gloves instead of something like T0.5 Gloves.</p>
+    	<p><strong>This means that our Paladin can keep up Devotion Aura to provide extra mitigation for us during <a href="#melee-mode">Melee Mode</a>, as well as for the Warrior tanking Vek'nilash.</strong></p>
+    	<p><em>*There is a case to be made for the 85% pushback resistance from untalented Concentration Aura and PVP gloves, with a lower average cast time than 1.6s. However, given how minor the benefit is I would not use this combination, especially since it is still capable of suffering from bad RNG.</em></p>
+
+
     	<h3 id="pushback-explanation">8.2 Explanation</h3>
+    	<p>First we'll discuss the theory behind why this is.</p>
+    	<figure id="fig27">
+    		<img class="center-img" src="assets/twins/pushback-theory.jpg" alt="Theoretical Spell Pushback.">
+    		<figcaption>Fig 27: Theoretical Spell Pushback.</figcaption>
+    	</figure>
+    	<p><a href="#fig27">Figure 27</a> shows spell pushback suffered by successive Searing Pain casts assuming Vek'lor's Shadow Bolt first hits us 1.3s into our cast. The red crosses indicate cast bars that will be pushed back, the green checkmarks indicate bars that will complete their cast. A green bar indicates the current cast progress, and a faint red bar the cast time lost due to the last pushback.</p>
+    	<p>If Shadow Bolt hits us at over 1s into our cast (e.g. Cast 1), on the next cast we will be hit again but at under 1s (e.g. Cast 2). Once we have suffered pushback less than 1s into our cast, all successive casts will now always recieve pushback 0.1s in (e.g. Casts 3 and 4). At that point, assuming we do not stop spamming Searing Pain, we will suffer exactly 0.1s of pushback on each cast; i.e. our effective cast time will be 1.6s (the same as Vek'lor's). Depending on the timing of when the first Shadow Bolt lands, we will suffer a larger pushback on our first 1-2 casts, but all casts after that will take 1.6s.</p>
+    	<p>To explore this further I wrote a simple MATLAB simulation of the fight. First we'll test our hypothesis, by considering the case with zero pushback resistance.</p>
+    	<figure id="fig28">
+    		<img class="center-img" src="assets/twins/matlab/0-pushback-fixed.jpg" alt="0% pushback cast times.">
+    		<figcaption>Fig 28: Cast times for 0% pushback resistance, and exactly 1.6s Vek'lor cast time.</figcaption>
+    	</figure>
+    	<p>In <a href="#fig28">Figure 28</a> we see the results of 1000 iterations of the simulation. The timing for the initial Shadow Bolt hitting us is randomly chosen each interation. We see that by ~3 casts we are synced with the boss's 1.6s cast time. The small variations are due to the the 1% base chance to resist a Shadow Bolt that we always have.</p>
+    	<p>However, Vek'lor occasionally pauses, taking very slightly more than 1.6s to cast. This will cause higher and more inconsistent pushback. We should model this. To model the variation in Shadow Bolt timing I used a half normal distribution and with a standard deviation of 0.02s and a maximum cast delay of 0.1s.</p>
+    	<figure id="fig29">
+    		<img class="center-img" src="assets/twins/matlab/0-pushback-variable.jpg" alt="0% pushback cast times, with variable Veklor casts.">
+    		<figcaption>Fig 29: Cast times for 0% pushback resistance, and variable Vek'lor cast time.</figcaption>
+    	</figure>
+    	<p><a href="#fig29">Figure 29</a> shows the results after introducing this variable Shadow Bolt timing, for 1000 iterations. Looking just at casts after the first 3, i.e. after syncing, we had:</p>
+    	<ul>
+    		<li>Mean Cast Time: 1.6002s</li>
+    		<li>Standard Deviation: 0.0188s</li>
+    		<li>Minimum Cast Time: 1.5s</li>
+    		<li>Maximum Cast Time: 1.8s</li>
+    		<li>Median Absolute Deviation: 0.0111s, this will be a useful comparison later when we see that other pushback resistances give multimodal distributions.</li>
+    		<li>Average Cast Time for 3 Consecutive Casts: 1.6000s</li>
+    	</ul>
+    	<figure id="fig30">
+    		<img class="center-img" src="assets/twins/matlab/35-pushback-variable.jpg" alt="35% pushback cast times, with variable Veklor casts.">
+    		<figcaption>Fig 30: Cast times for 35% pushback resistance, and variable Vek'lor cast time.</figcaption>
+    	</figure>
+    	<p>Let's instead now consider the case of using just the standard Concentration Aura, i.e. a 35% chance of pushback resistance. The results are shown in <a href="#fig30">Figure 30</a>, and we see there are huge inconsistencies in cast times. The result is a multimodal distribution, representing the number of times we resisted a Shadow Bolt before finally taking pushback. Of course, ~35% of casts are 1.5s. However, the pushback resistance means we do not sync up with the boss's cast and so can suffer pushback much later in the cast. This results in much longer effective cast times.</p>
+    	<ul>
+    		<li>Mean Cast Time: 1.6047s</li>
+    		<li>Standard Deviation: 0.1098s</li>
+    		<li>Minimum Cast Time: 1.5s</li>
+    		<li>Maximum Cast Time: 2.5s</li>
+    		<li>Median Absolute Deviation: 0.0777s</li>
+    		<li>Average Cast Time for 3 Consecutive Casts: 1.6009s</li>
+    	</ul>
+    	<figure id="fig31">
+    		<img class="center-img" src="assets/twins/matlab/50-pushback-variable.jpg" alt="50% pushback cast times, with variable Veklor casts.">
+    		<figcaption>Fig 31: Cast times for 50% pushback resistance, and variable Vek'lor cast time.</figcaption>
+    	</figure>
+    	<p>Next we'll look at 50% pushback resistance. This is equivalent to just running PVP gloves and no Paladin Aura, or just running 3/3 Improved Concentration Aura without the gloves. The results are shown in <a href="#fig31">Figure 31</a>. We see the same effect here as for 35%. Yes ~50% of the casts are 1.5s, however the times that we do not ignore pushback have hugely inconsistent cast times.</p>
+    	<ul>
+    		<li>Mean Cast Time: 1.6053s</li>
+    		<li>Standard Deviation: 0.1458s</li>
+    		<li>Minimum Cast Time: 1.5s</li>
+    		<li>Maximum Cast Time: 2.5s</li>
+    		<li>Median Absolute Deviation: 0.1070s</li>
+    		<li>Average Cast Time for 3 Consecutive Casts: 1.6013s</li>
+    	</ul>
+    	<p>An important note here is that for 35% pushback, ~16.9% of casts were longer than 1.7s. For 50% pushback, ~19.7% were longer than 1.7s. This makes sense when we remember that if a cast suffers pushback over 1s into the cast, then on the next cast we will be hit much earlier (at under 1s) into the cast. If we ignore pushback when it would have otherwise only recieved a small penalty it results in a much larger penalty next time. We are next hit when we are late in the cast again.</p>
+    	<figure id="fig32">
+    		<img class="center-img" src="assets/twins/matlab/85-pushback-variable.jpg" alt="85% pushback cast times, with variable Veklor casts.">
+    		<figcaption>Fig 32: Cast times for 85% pushback resistance, and variable Vek'lor cast time.</figcaption>
+    	</figure>
+    	<p>Finally the 85% pushback resistance case, where we have untalented Concentration Aura combined with the PVP gloves. The results are shown in <a href="#fig32">Figure 32</a>. The left graph, showing all 1000 trials, is difficult to interpret. The key thing to notice is that as we increase the pushback resistance the density of lines that are in the 1.6s cast time range gets less and less. The syncing effect was still observable in some trials previously, whereas at this point it is almost entirely gone. As seen in the histogram, we still have an inconsistency in our casts, but as expected only ~15% of casts are greater than 1.5s.</p>
+    	<ul>
+    		<li>Mean Cast Time: 1.5701s</li>
+    		<li>Standard Deviation: 0.2006s</li>
+    		<li>Minimum Cast Time: 1.5s</li>
+    		<li>Maximum Cast Time: 2.5s</li>
+    		<li>Median Absolute Deviation: 0.1195s</li>
+    		<li>Average Cast Time for 3 Consecutive Casts: 1.5700s</li>
+    	</ul>
+    	<p>This is the first time that we actually have an average cast time that is below 1.6s. The deviation shows that the unresisted pushback is still resulting in wildly inconsistent cast times, however it is such a minority of the Searing Pain casts that it is less relevant. That said, with this setup it is still possible to get very bad RNG and have a string of casts with a high average cast time.</p>
+    	<p>The 100% pushback resistance case is trivial, 100% of your Searing Pain casts are 1.5s. Personally I feel that the benefit from any of these partial, or full, pushback mitigation setups is so minor as to not be worthwhile. I feel that the 35% and 50% cases are clearly worse than 0%, and the benefit from 85% and 100% is very small. Realistically the benefit is not going to change whether you successfully defeat Twin Emps. Having Devotion Aura up is far more impactful, since the Warrior's tanking phase and the rare <a href="#melee-mode">Melee Mode</a> are the real difficult part of this fight.</p>
     </section>	
 
     <section id="resources">
     	<h2>9. Useful Resources</h2>
+    	<ul>
+    		<li><a href="https://wago.io/Qvo4g9stE" target="_blank" rel="noopener noreferrer">Vek'lor Searing Pain Resist WeakAura</a></li>
+    		<li><a href="https://royalgiraffe.github.io/resist-calc" target="_blank" rel="noopener noreferrer">Royalgiraffe's Resistance Calculator</a></li>
+    		<li><a href="https://royalgiraffe.github.io/resist-guide" target="_blank" rel="noopener noreferrer">Royalgiraffe's Resistance Guide</a></li>
+    		<li><a href="https://cdn.discordapp.com/attachments/823477524955791360/1330604378024968304/Zephans_Warlock_Simulation_4.1.1.xlsx?ex=68545665&is=685304e5&hm=5d33d54cfac31696cd3deb83f344ad76e1c0ea2e5b9afb58a1b490ece9629a2d&" target="_blank" rel="noopener noreferrer">Zephan's Warlock Sim</a></li>
+    		<li><a href="https://www.twitch.tv/esuvii/" target="_blank" rel="noopener noreferrer">esuvii's Twitch Stream</a>, come as me questions or give feedback!</li>
+    	</ul>
     </section>
 
      <footer>
+        <p>I hope that you found this guide useful! If you did consider coming into my stream to say hi! Good luck and have fun tanking Twin Emps!</p>
         <p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="license noopener noreferrer">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
     </footer>
     <a href="#contents" class="fixed-back-to-top">↑</a>
