@@ -6,15 +6,10 @@ body {
     line-height: 1.6;
     margin: 0 auto;
     max-width: 800px;
+    padding: 20px;
     background-color: #f4f4f4;
     color: #333;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.page-content {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-
 }
 h1, h2, h3 {
     color: #0056b3;
