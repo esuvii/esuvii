@@ -67,12 +67,19 @@
             		<li><a href="#gearing-runed-stygian">5.4 Runed Stygian Patterns</a></li>
             	</ul>
             <li><a href="#talents">6. Talents</a></li>
+            	<ul>
             		<li><a href="#talents-smruin">6.1 SM/Ruin</a></li>
             		<li><a href="#talents-dsruin">6.2 DS/Ruin</a></li>
             		<li><a href="#talents-mdruin">6.3 MD/Ruin</a></li>
             		<li><a href="#talents-soullink">6.4 Soul Link</a></li>
             		<li><a href="#talents-impimp">6.5 Imp Imp</a></li>
+            	</ul>
             <li><a href="#melee-mode">7. Melee Mode</a></li>
+            	<ul>
+            		<li><a href="#melee-mode-causes">7.1 Known Causes</a></li>
+            		<li><a href="#melee-mode-recovery">7.2 Recovery</a></li>
+            	</ul>
+
             <li><a href="#pushback">8. Spell Pushback Analysis</a></li>
             	<ul>
             		<li><a href="#pushback-results">8.1 Results</a></li>
@@ -1587,17 +1594,17 @@
     		<figcaption>Fig 24: The Imp Imp/Emberstorm Talents.</figcaption>
     	</figure>
     	<p><a href="#fig24">Figure 24</a> shows the Imp Imp/Emberstorm build. With this spec we run Imp for Blood Pact, however that Blood Pact is now +54 Stam due to 3/3 Improved Imp. We combine this with Demonic Embrace for even more Stamina. We still have Suppresion to increase the Curse of Doom consistency, but additionally we have 5/5 Improved Searing Pain and 5/5 Emberstorm to buff our Searing Pain Threat.</p>
-    	<p>A very small trick prior to <a href="#positioning-pull">The Pull</a> that this spec enables for the Left Warlock is: Summon Voidwalker, Sacrifice him, Fel Domination, then Summon Imp. While this does provide an extra absorb shield, on top of Shadow Ward, it is extremely minor. Remember we have plenty of mitigation against Shadow Bolt so it is largely unnecessary. I would NOT recommend this trick in general, since it can serve to overcomplicate the pull for a minor gain. Simple is safe. However, it is an option if you want to use it.</p>
+    	<p>A very small trick, prior to <a href="#positioning-pull">The Pull</a>, that this spec enables for the Left Warlock is: Summon Voidwalker, Sacrifice him, Fel Domination, then Summon Imp. While this does provide an extra absorb shield, on top of Shadow Ward, it is extremely minor. Remember we have plenty of mitigation against Shadow Bolt so it is largely unnecessary. I would NOT recommend this trick in general, since it can overcomplicate the pull for a minor gain. Simple is safe. However, it is an option if you want to use it.</p>
     	<p><strong>Advantages:</strong></p>
 		<ul>
 			<li><strong>The highest possible Stamina, with 3/3 Blood Pact and 5/5 Demonic Embrace.</strong> This provides both us, and the Warrior tank, with +54 Stam in addition to a +15% Stam increase for ourselves. Let's look back at the T2 + Crafted SR set shown in <a href="#gearing-example">Example SR Sets</a>. <strong>This puts us at over ~10100 Health!</strong> Compared to a case of no Blood Pact <em>and</em> no Demonic Embrace, this accounts for ~1600 HP (with world buffs, but no Kings).</li>
-			<li><strong>+10% Searing Pain damage from Emberstorm.</strong>. While not quite as large a damage buff as Demonic Sacrifice, this is still a noticable increase.</li>
-			<li><strong>5/5 Suppression.</strong>. +10% Spell Hit for Curse of Doom, making it less likely to resist.</li>
+			<li><strong>+10% Searing Pain damage from Emberstorm.</strong> While not quite as large a damage buff as Demonic Sacrifice, this is still a noticable increase.</li>
+			<li><strong>5/5 Suppression.</strong> +10% Spell Hit for Curse of Doom, making it less likely to resist.</li>
 			<li><strong>Improved Healthstone.</strong></li>
 		</ul>
 		<p><strong>Disadvantages:</strong></p>
 		<ul>
-			<li><strong>Highly tailored for Twin Emps.</strong> Outside of Twin Emps this isn't a very good DPS build.</li>
+			<li><strong>Highly tailored for Twin Emps.</strong> Outside of Twin Emps this isn't a good DPS build.</li>
 			<li><strong>No increase to SR.</strong> Does not provide Master Demonologist for the +60 SR bonus.</li>
 			<li><strong>Not quite the highest Threat spec.</strong> While Emberstorm is good it is not quite as high of a Searing Pain buff as is possible from <a href="#talents-dsruin">DS/Ruin.</a></li>
 		</ul>
@@ -1608,12 +1615,75 @@
     		<figcaption>Fig 25: The Imp Imp/Utility Talents.</figcaption>
     	</figure>
     	<p><a href="#fig25">Figure 25</a> shows the Utility variant of the Imp Imp spec. This spec is one that I often recommend to beginner Hardcore 60 Warlocks who are less concerned with damage and want to just survive dungeon grinding and their first few raids. It plays just like <a href="#talents-smruin">SM/Ruin</a> just taking Improved Imp and Demonic Embrace instead of Shadow Mastery. With 5/5 Fel Concentration it is also viable for open world mob grinding.</p>
-    	<p>Aside from lacking the Searing Pain damage buff from Emberstorm, this has all the other advantages of the Imp Imp/Emberstorm variant. For Twins specifically it is still superior to <a href="#talents-smruin">SM/Ruin</a> due to the much increased Stamina. If you want a more general Dual Spec, that can be used to provide your party with Improved Imp on other fights too, then this can be a good choice.</p>
+    	<p>Aside from lacking the Searing Pain damage buff from Emberstorm, this has all the other advantages of the Imp Imp/Emberstorm variant. For Twins specifically it is still superior to SM/Ruin due to the much increased Stamina. If you want a more general Dual Spec, that can provide your party with Improved Imp on other fights too, then this can be a good choice.</p>
+    	<p>A small thing to note: If you had 0/3 Improved Imp then swap to these talents you will need to click Blood Pact twice - disable then enable it. I have noticed this bug sometimes, where without toggling it the Imp is providing the unimproved version. Frustratingly the buff's tooltip always shows +42 Stam, but you can verify that it is working by looking at your Stamina in the Character pane.</p>
     </section>
 
     <section id="melee-mode">
-    	<h2>7. Melee Mode</h2>    	
-    </section>
+    	<h2>7. Melee Mode</h2>
+    	<p>Melee Mode is a phenomenon where Vek'lor runs forward to melee the player, instead of standing still casting Shadow Bolt. Typically he will first run forwards Arcane Burst, which is actually the optimal outcome for us as the Warlock tank. These melee attacks can hit quite hard, if it crits you it can hit for ~6000 damage. You can see how this combined with a ~4000 damage Arcane Burst can potentially be lethal. Hence our decision to always have a GAPP up before the fight, despite this being a very rare mechanic. Following the strategy outlined in this guide I almost never see Melee Mode, but it does happen perhaps 1 in 20 fights.</p>
+
+    	<h3 id="melee-mode-causes">7.1 Known Causes</h3>
+    	<p><strong>Being too close to Vek'lor.</strong> The first, and most common, cause of Melee Mode is a player being too close to the boss. Usually this is the Warrior tank failing to immediately move far enough from Vek'lor immediately after the Teleport. This means being outside of not just melee range but also Arcane Burst range (10 yds). In fact, 10 yds is not always enough. The Warrior can run back to a similar distance as you as a guide. If a player is a little outside of Arcane Burst range then Vek'lor my walk forward and use the spell. A useful comparison are the caster mobs in WPL and EPL. They have a complex AI that will rarely move closer to Frost or Fire Nova you.</p>
+    	<figure id="vid5">
+    		<div class="video-responsive">
+    			<iframe src="https://www.youtube.com/embed/9dgi6JdcFlU?si=ja4ixMstPl7xkLdC" title="Warrior in range of Arcane Burst" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    		</div>
+		    <figcaption>Video 5: A Warrior in range of Arcane Burst, triggering Melee Mode. <em>Credit to Pools on Defias Pillager for providing this footage.</em></figcaption>
+		</figure>
+		<p><a href="#vid5">Video 5</a> shows an example of this. As we see here it's not just about top Threat being too close. <strong>Anyone being too close can cause Melee Mode, including pets.</strong> This is why it is vital your pet is on Passive, and you don't accidentally send them in to attack. This is particularly important for Felhunter builds, since the Felhunter will run into melee if it is on Defensive.</p>
+		<p><em>If you have any further knowledge on Melee Mode, or some good clips of it happening, please reach out to me so I can expand this section!</em></p>
+		<p><strong>Outranging Shadow Bolt.</strong> Vek'lor's Shadow Bolt has a range of 45 yds. If you outrange it he will of course chase you, however he won't necessarily stop and begin casting once in range. Often he will enter Melee Mode instead. Our strategy involves never repositioning Vek'lor - all repositioning is done by the Warrior tanking Vek'nilash. This means as the Warlock tank you should never be the cause of this, we avoid mechanics in a circular arc that keeps our distance to Vek'lor roughly constant.</p>
+		<p>What you cannot personally control are DPS who keep attacking Vek'lor right up until Teleport, or leave big hitting DoTs like Ignite rolling. A spell in mid-flight, or one that batches with Teleport, will hit Vek'lor after he reappears. This can cause someone on the opposite side of the room to be top Threat after Teleport, thus causing him to chase them. This is why it is vital that all DoTs expire before the Teleport window opens, and once the window is open everyone (including the Warlock tank) stops attacking him.</p>
+		<p>The only time I would ever reconsider repositioning Vek'lor as the Warlock tank is if he was within the Heal Brother range of Vek'nilash. This is extremely unlikely however as he would need to have moved very far out of position to be within 60 yds of the other boss.</p>
+		<p><strong>Vanish, Feign Death, or Petri, during Teleport.</strong> A quirk of many Vanilla WoW encounters is the use of a hidden NPC to trigger mechanics for the fight. Sometimes referred to as the "Third Twin", there is an invisible unit under the map, <a href="https://www.wowhead.com/classic/npc=15695/vek-twins-trigger" target="_blank" rel="noopener noreferrer">Vek Twins Trigger</a>, which handles the Threat mechanic for Teleport. It is advised that no one uses Vanish, Feign Death, or Flask of Petrification, during the Teleport window since if it overlaps the Teleport it can cause issues. I have never actually seen this myself, however I am told on good authority that it can happen. For safety I recommend against the use of these abilities, and certainly not inside the Teleport window.</p>
+		<p>What I have experienced numerous times on non-Hardcore is a player being dead during the Teleport, then revived through Rebirth, Ankh, or Soulstone. If you're dead during the Teleport your Threat may not be reset, meaning when revived you are likely to have a lot of Threat on the boss. When I was first learning Twin Emps, back in 2020, I successfully used this to recover a pull - I had died fighting Vek'lor but waited until the next time he was on my side to use my Soulstone.</p>
+		<p><strong>Evading the boss.</strong> While this has never been confirmed, it is widely reported that people have had far fewer instances of Melee Mode by avoiding having anyone (certaintly the tanks) standing on the stairs by the room's entrance. This makes some intuitive sense: If the boss cannot path to you he may behave strangely. While I have never seen definitive proof that the stairs cause Melee Mode, I do know that they can cause line-of-sight issues between a until downstairs one one on the upper level by the wall. I personally use this to avoid the Fear effect when the post-Twins Qiraji Mindslayers die. Nonetheless, our strategy doesn't actually have anyone on the stairs, so this is not an issue.</p>
+
+    	<h3 id="melee-mode-recovery">7.2 Recovery</h3>
+    	<p>To exit Melee Mode you are going to need to try to be an appropriate distance from Vek'lor that allows you to tank the boss. You may have to run away to avoid being hit in melee multiple times. You should <strong>NEVER Petri while tanking Vek'lor</strong>. This will wipe your Threat, and it's unlikely that you will be able to recover during this tanking phase. The only exception would be if your raid leader calls for everyone to Petri.</p>
+    	<p><strong>The first thing to consider is where the Arcane Burst is going to send you.</strong> You should be aware of this so you are not trapped in a corner.</p>
+    	<figure id="fig26">
+    		<img class="center-img" src="assets/twins/burst-direction.jpg" alt="Preparing for Arcane Burst.">
+    		<figcaption>Fig 26: Preparing for Arcane Burst.</figcaption>
+    	</figure>
+    	<p>In <a href="#fig26">Figure 26</a> we see a case where the Warrior tank has triggered Melee Mode by being too close to Vek'lor. As soon as you notice that the boss is in Melee Mode (moving) you should focus on where an Arcane Burst will knock you:</p>
+    	<ul>
+    		<li>The white arrow shows the direction Vek'lor is moving.</li>
+    		<li>The dotted line marks the edge of the ramp.</li>
+    		<li>The shaded red region is where you do NOT want to be sent. You can get trapped in this corner between the wall and the ramp.</li>
+    		<li>The green arrow shows an optimal Arcane Burst knockback, sending us up onto the ramp, and importantly not into the red region.</li>
+    		<li>The purple arrow is how I would move if I noticed Melee Mode. I am moving laterally so that I am knocked onto the ramp instead of into the corner.</li>
+    	</ul>
+    	<p>The main focus here is to not be knocked into the corner between the wall and the ramp. This is a bad place to be:</p>
+    	<ul>
+    		<li>The edge of the ramp may break line-of-sight from your healers.</li>
+    		<li>You will have to move all the way through Vek'lor to leave melee range.</li>
+    	</ul>
+    	<p>In my opinion being knocked up onto the stairs is a decent option, since your healers have clear line-of-sight to you. You are also not bringing Vek'lor into melee range with the DPS group.</p>
+    	<figure id="vid6">
+    		<div class="video-responsive">
+    			<iframe src="https://www.youtube.com/embed/yP7bsNaHQr4?si=1DBGcf9qJzjMF0wa" title="Seanlocked vs Vek'lor Melee Mode" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    		</div>
+		    <figcaption>Video 6: Another example of Melee Mode. <em>Credit to Seanlock on Defias Pillager for providing this footage.</em></figcaption>
+		</figure>
+		<p>At roughly the 11 second timestamp in <a href="#vid6">Video 6</a> we see an example of Arcane Burst knocking the Warlock tank up onto the ramp. This was a particularly challenging example of Melee Mode, where the boss melees the Warlock prior to the Arcane Burst.</p>
+		<p>Often, Arcane Burst will send you to a distance that is reasonable to tank the boss at. In many cases the Melee Mode will end here, and you can simply remain in your new position and continue tanking the boss.</p>
+		<p><strong>DPS stop, and leave melee range.</strong> Having to overcome DPS that are still pumping, or are within melee range, is too much to ask of a Warlock tank trying to get Vek'lor to exit Melee Mode. However, if a DPS is close on Threat and the correct distance to tank Vek'lor they could purposefully overtake Threat in an attempt to temporarily take over as the tank. <strong>Generally, I do NOT recommend this.</strong> The intention must be clearly communicated to the raid, and you must be tanky enough to survive. The primary issue here is that so much is already going on, and people are likely panicking. Adding another person into this can make communication difficult, and its also adding in another person to heal. Ideally the healers are focused on bombing all possible heals into the Warlock tank during these crucial moments.</p>
+		<p><strong>LIP then cancel it.</strong> An option that has worked well in the past to force Vek'lor back into casting Shadow Bolt is to Limited Invulnerability Potion, and then cancel it almost immediately afterwards. You can remove LIP by right-clicking the buff off, or by using:</p>
+<div class="code-block"><pre><code>/cancelaura Invulnerability</code></pre></div>
+		<p>This works because usually Vek'lor will target the 2nd Threat player when you LIP. Assuming they are at the correct distance, Vek'lor will likely exit Melee Mode and decide to Shadow Bolt them. <strong>You must cancel this quickly.</strong> Worst case scenario the DPS player takes 1 Shadow Bolt, you must not let them take multiple. Be ready to cancel before you use the LIP.</p>
+		<p>Notice I say "usually". The interaction of LIP is somewhat inconsistent with Vek'lor, and I believe the outcome may depend on what he is doing at the instance that you use it:</p>
+		<ol>
+			<li>He targets a new player and starts casting Shadow Bolt at them. This is the most common outcome that I have seen.</li>
+			<li>He exits Melee Mode but continues to cast Shadow Bolt at you. This was an unexpected result but I have had it personally happen on two occasions.</li>
+			<li>He continues to Melee you despite you having LIP up. We see this happen in <a href="#vid6">Video 6</a>.</li>
+		</ol>
+		<p>I consider LIP a <strong>last resort</strong>. You can first see if Arcane Burst allows you to land in a new tanking position that causes Vek'lor to exit Melee Mode first.</p>
+		<p><strong>Greater Stoneshield and tank some hits.</strong> I did not include Greater Stoneshield Potion in the <a href="#consumables">Consumable List</a> since I generally thing LIP into immediately cancelling it is a better option. However, you could choose to Stoneshield in order to stay top Threat on Vek'lor. This is the potion equivalent of putting on a Shield, and it is a decent amount of mitigation. That said, Vek'lor hits very hard so even with Stoneshield it's going to be hard to heal you through it. Thankfully Vek'lor has a reasonable swing timer, I believe it is ~1.9s, so if healers are bombing you with heals you should be able to tank a couple of hits.</p>
+		<p><strong>Ensure the Warrior tank is closest to Vek'lor before Teleport.</strong> It is very likely that your new tanking position is much closer to Vek'lor when he exits Melee Mode than you are used to. It is vitally important that the Warrior is closer once the Teleport window opens. You may have to adjust to move back slightly to allow the Warrior to get closer, however I would advise not moving too much once you have him in a position that is working. Remember, the boss will do nothing for 1-2s after Teleport. Use this time to get away.</p>
+		<p>In <a href="#vid6">Video 6</a> we see that the Warlock tank is closer than the Warrior when Teleport occurs. Vek'nilash targets the Warlock hits them three times, each for ~2000-3000 damage (non-crit). If this happens you should immediately LIP. If LIP is on CD from the previous phase you should Petri, with the video showing a great example of this. If Vek'nilash uses Unbalancing Strike on you then there is a good chance you will be one-shot.</p>
+   </section>
 
     <section id="pushback">
     	<h2>8. Spell Pushback Analysis</h2>
